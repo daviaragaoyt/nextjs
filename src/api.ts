@@ -6,7 +6,7 @@ const fetcher = (input: RequestInfo, init?: RequestInit) =>
 
 const usuarioPath = "/api/usuarios";
 
-export const useTodos = () => useSWR<Usuario[]>(usuarioPath, fetcher);
+export const useUsuarios = () => useSWR<Usuario[]>(usuarioPath, fetcher);
 
 export const criarUsuario = async (nome: string, senha: string) => {
   mutate(
