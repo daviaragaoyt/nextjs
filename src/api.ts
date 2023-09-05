@@ -11,12 +11,12 @@ export const useUsuarios = () => useSWR<Usuario[]>(usuarioPath, fetcher);
 export const criarUsuario = async (nome: string, senha: string) => {
   mutate(
     usuarioPath,
-    todos => [{ nome: senha, senha: senha, id: "new-todo" }, ...todos],
+    usuarios => [{ nome: nome, senha: senha, id: "new-todo" }, ...usuarios],
     false,
   );
   await fetch(usuarioPath, {
     method: "POST",
-    body: JSON.stringify({ nome }),
+    body: JSON.stringify({ nome , senha}),
   });
 
   mutate(usuarioPath);
@@ -25,8 +25,8 @@ export const criarUsuario = async (nome: string, senha: string) => {
 export const toggleUsuario = async (todo: Usuario) => {
   mutate(
     usuarioPath,
-    todos =>
-      todos.map(t =>
+    usuarios =>
+      usuarios.map(t =>
         t.id === todo.id ? { ...todo, completed: !t.completed } : t,
       ),
     false,
@@ -39,7 +39,7 @@ export const toggleUsuario = async (todo: Usuario) => {
 };
 
 export const deleteTodo = async (id: string) => {
-  mutate(usuarioPath, todos => todos.filter(t => t.id !== id), false);
+  mutate(usuarioPath, usuarios => usuarios.filter(t => t.id !== id), false);
   await fetch(`${usuarioPath}?todoId=${id}`, { method: "DELETE" });
   mutate(usuarioPath);
 };

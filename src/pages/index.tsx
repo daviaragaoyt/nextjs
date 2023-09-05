@@ -1,7 +1,12 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import { useMemo, useState } from "react";
-import { criarUsuario as criarUsuario, deleteTodo, toggleUsuario, useUsuarios } from "../api";
+import {
+  criarUsuario as criarUsuario,
+  deleteTodo,
+  toggleUsuario,
+  useUsuarios,
+} from "../api";
 import styles from "../styles/Home.module.css";
 import { Usuario } from "../types";
 
@@ -12,12 +17,14 @@ export const TodoList: React.FC = () => {
   if (todos == null) return <div>Loading...</div>;
 
   if (todos.length === 0) {
-    return <div className={styles.emptyState}>Try adding a todo ☝️️</div>;
+    return (
+      <div className={styles.emptyState}>Tente adicionar um usuário! ☝️️</div>
+    );
   }
 
   return (
     <ul className={styles.todoList}>
-      {todos.map(todo => (
+      {todos.map((todo) => (
         <TodoItem todo={todo} />
       ))}
     </ul>
@@ -26,10 +33,7 @@ export const TodoList: React.FC = () => {
 
 const TodoItem: React.FC<{ todo: Usuario }> = ({ todo }) => (
   <li className={styles.todo}>
-    <label
-      className={styles.label}
-    >
-    </label>
+    <label className={styles.label}></label>
 
     <button className={styles.deleteButton} onClick={() => deleteTodo(todo.id)}>
       ✕
@@ -43,7 +47,7 @@ const AddTodoInput = () => {
 
   return (
     <form
-      onSubmit={async e => {
+      onSubmit={async (e) => {
         e.preventDefault();
         criarUsuario(nome, senha);
         setNome("");
@@ -55,13 +59,13 @@ const AddTodoInput = () => {
         className={styles.input}
         placeholder="Nome"
         value={nome}
-        onChange={e => setNome(e.target.value)}
+        onChange={(e) => setNome(e.target.value)}
       />
       <input
         className={styles.input}
         placeholder="Senha"
-        value={nome}
-        onChange={e => setNome(e.target.value)}
+        value={senha}
+        onChange={(e) => setSenha(e.target.value)}
       />
       <button className={styles.addButton}>Adicionar</button>
     </form>

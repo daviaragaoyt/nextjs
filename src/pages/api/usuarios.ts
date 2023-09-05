@@ -12,15 +12,16 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     res.json(usuarios);
   } else if (req.method === "POST") {
     // create usuario
-    const text = JSON.parse(req.body).text;
+    const nome = JSON.parse(req.body).nome;
+    const senha = JSON.parse(req.body).senha;
     const usuario = await prisma.usuario.create({
-      data: { nome: 'nome', senha: 'senha' , id: 'id'},
+      data: { nome: nome, senha: senha , id: 'id'},
     });
 
     res.json(usuario);
   } else if (req.method === "PUT") {
     // update usuario
-    const id = req.query.usuarioId as string;
+    const id = req.query.id as string;
     const data = JSON.parse(req.body);
     const usuario = await prisma.usuario.update({
       where: { id },
@@ -30,7 +31,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     res.json(usuario);
   } else if (req.method === "DELETE") {
     // delete usuario
-    const id = req.query.usuarioId as string;
+    const id = req.query.id as string;
     await prisma.usuario.delete({ where: { id } });
 
     res.json({ status: "ok" });
