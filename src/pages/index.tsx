@@ -3,20 +3,20 @@ import Head from "next/head";
 import { useMemo, useState } from "react";
 import {
   criarUsuario as criarUsuario,
-  deleteTodo,
+  deleteTodo as deletarUsuario,
   toggleUsuario,
   useUsuarios,
 } from "../api";
 import styles from "../styles/Home.module.css";
 import { Usuario } from "../types";
 
-export const TodoList: React.FC = () => {
-  const { data: todos, error } = useUsuarios();
+export const ListaUsuarios: React.FC = () => {
+  const { data: usuarios, error } = useUsuarios();
 
-  if (error != null) return <div>Error loading todos...</div>;
-  if (todos == null) return <div>Loading...</div>;
+  if (error != null) return <div>Error ao carregar usuários...</div>;
+  if (usuarios == null) return <div>Carregando...</div>;
 
-  if (todos.length === 0) {
+  if (usuarios.length === 0) {
     return (
       <div className={styles.emptyState}>Tente adicionar um usuário! ☝️️</div>
     );
@@ -24,24 +24,27 @@ export const TodoList: React.FC = () => {
 
   return (
     <ul className={styles.todoList}>
-      {todos.map((todo) => (
-        <TodoItem todo={todo} />
+      {usuarios.map((usuario) => (
+        <ItemUsuario usuario={usuario} />
       ))}
     </ul>
   );
 };
 
-const TodoItem: React.FC<{ todo: Usuario }> = ({ todo }) => (
+const ItemUsuario: React.FC<{ usuario: Usuario }> = ({ usuario }) => (
   <li className={styles.todo}>
-    <label className={styles.label}></label>
+    <label className={styles.label}>{usuario.nome}</label>
 
-    <button className={styles.deleteButton} onClick={() => deleteTodo(todo.id)}>
+    <button
+      className={styles.deleteButton}
+      onClick={() => deletarUsuario(usuario.id)}
+    >
       ✕
     </button>
   </li>
 );
 
-const AddTodoInput = () => {
+const AddUsuarioInput = () => {
   const [nome, setNome] = useState("");
   const [senha, setSenha] = useState("");
 
@@ -85,9 +88,9 @@ const Home: NextPage = () => {
       </header>
 
       <main className={styles.main}>
-        <AddTodoInput />
+        <AddUsuarioInput />
 
-        <TodoList />
+        <ListaUsuarios />
       </main>
     </div>
   );
