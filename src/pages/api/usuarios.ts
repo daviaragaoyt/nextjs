@@ -7,14 +7,14 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "GET") {
     // get all usuarios
     const usuarios = await prisma.usuario.findMany({
-      orderBy: { createdAt: "desc" },
+      orderBy: { criadoEm: "desc" },
     });
     res.json(usuarios);
   } else if (req.method === "POST") {
     // create usuario
     const text = JSON.parse(req.body).text;
     const usuario = await prisma.usuario.create({
-      data: { text, completed: false },
+      data: { nome: 'nome', senha: 'senha' , id: 'id'},
     });
 
     res.json(usuario);
