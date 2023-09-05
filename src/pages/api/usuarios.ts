@@ -5,33 +5,33 @@ const prisma = new PrismaClient();
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "GET") {
-    // get all todos
-    const todos = await prisma.todo.findMany({
+    // get all usuarios
+    const usuarios = await prisma.usuario.findMany({
       orderBy: { createdAt: "desc" },
     });
-    res.json(todos);
+    res.json(usuarios);
   } else if (req.method === "POST") {
-    // create todo
+    // create usuario
     const text = JSON.parse(req.body).text;
-    const todo = await prisma.todo.create({
+    const usuario = await prisma.usuario.create({
       data: { text, completed: false },
     });
 
-    res.json(todo);
+    res.json(usuario);
   } else if (req.method === "PUT") {
-    // update todo
-    const id = req.query.todoId as string;
+    // update usuario
+    const id = req.query.usuarioId as string;
     const data = JSON.parse(req.body);
-    const todo = await prisma.todo.update({
+    const usuario = await prisma.usuario.update({
       where: { id },
       data,
     });
 
-    res.json(todo);
+    res.json(usuario);
   } else if (req.method === "DELETE") {
-    // delete todo
-    const id = req.query.todoId as string;
-    await prisma.todo.delete({ where: { id } });
+    // delete usuario
+    const id = req.query.usuarioId as string;
+    await prisma.usuario.delete({ where: { id } });
 
     res.json({ status: "ok" });
   }

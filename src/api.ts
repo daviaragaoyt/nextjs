@@ -1,45 +1,45 @@
 import useSWR, { mutate } from "swr";
-import { Todo } from "./types";
+import { Usuario } from "./types";
 
 const fetcher = (input: RequestInfo, init?: RequestInit) =>
   fetch(input, init).then((res) => res.json());
 
-const todoPath = "/api/todos";
+const usuarioPath = "/api/usuarios";
 
-export const useTodos = () => useSWR<Todo[]>(todoPath, fetcher);
+export const useTodos = () => useSWR<Usuario[]>(usuarioPath, fetcher);
 
-export const createTodo = async (text: string) => {
+export const criarUsuario = async (nome: string, senha: string) => {
   mutate(
-    todoPath,
-    todos => [{ text, completed: false, id: "new-todo" }, ...todos],
+    usuarioPath,
+    todos => [{ nome: senha, senha: senha, id: "new-todo" }, ...todos],
     false,
   );
-  await fetch(todoPath, {
+  await fetch(usuarioPath, {
     method: "POST",
-    body: JSON.stringify({ text }),
+    body: JSON.stringify({ nome }),
   });
 
-  mutate(todoPath);
+  mutate(usuarioPath);
 };
 
-export const toggleTodo = async (todo: Todo) => {
+export const toggleUsuario = async (todo: Usuario) => {
   mutate(
-    todoPath,
+    usuarioPath,
     todos =>
       todos.map(t =>
         t.id === todo.id ? { ...todo, completed: !t.completed } : t,
       ),
     false,
   );
-  await fetch(`${todoPath}?todoId=${todo.id}`, {
+  await fetch(`${usuarioPath}?todoId=${todo.id}`, {
     method: "PUT",
-    body: JSON.stringify({ completed: !todo.completed }),
+    body: JSON.stringify({}),
   });
-  mutate(todoPath);
+  mutate(usuarioPath);
 };
 
 export const deleteTodo = async (id: string) => {
-  mutate(todoPath, todos => todos.filter(t => t.id !== id), false);
-  await fetch(`${todoPath}?todoId=${id}`, { method: "DELETE" });
-  mutate(todoPath);
+  mutate(usuarioPath, todos => todos.filter(t => t.id !== id), false);
+  await fetch(`${usuarioPath}?todoId=${id}`, { method: "DELETE" });
+  mutate(usuarioPath);
 };

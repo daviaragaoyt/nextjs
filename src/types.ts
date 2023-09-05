@@ -1,6 +1,6 @@
-export interface Todo {
+export interface Usuario {
   id: string;
-  created: string;
-  text: string;
-  completed: boolean;
+  criadoEm: string;
+  nome: string;
+  senha: string;
 }

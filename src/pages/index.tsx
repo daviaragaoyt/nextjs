@@ -1,12 +1,12 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import { useMemo, useState } from "react";
-import { createTodo, deleteTodo, toggleTodo, useTodos } from "../api";
+import { criarUsuario as criarUsuario, deleteTodo, toggleUsuario, useUsuarios } from "../api";
 import styles from "../styles/Home.module.css";
-import { Todo } from "../types";
+import { Usuario } from "../types";
 
 export const TodoList: React.FC = () => {
-  const { data: todos, error } = useTodos();
+  const { data: todos, error } = useUsuarios();
 
   if (error != null) return <div>Error loading todos...</div>;
   if (todos == null) return <div>Loading...</div>;
@@ -24,18 +24,11 @@ export const TodoList: React.FC = () => {
   );
 };
 
-const TodoItem: React.FC<{ todo: Todo }> = ({ todo }) => (
+const TodoItem: React.FC<{ todo: Usuario }> = ({ todo }) => (
   <li className={styles.todo}>
     <label
-      className={`${styles.label} ${todo.completed ? styles.checked : ""}`}
+      className={styles.label}
     >
-      <input
-        type="checkbox"
-        checked={todo.completed}
-        className={`${styles.checkbox}`}
-        onChange={() => toggleTodo(todo)}
-      />
-      {todo.text}
     </label>
 
     <button className={styles.deleteButton} onClick={() => deleteTodo(todo.id)}>
@@ -45,24 +38,32 @@ const TodoItem: React.FC<{ todo: Todo }> = ({ todo }) => (
 );
 
 const AddTodoInput = () => {
-  const [text, setText] = useState("");
+  const [nome, setNome] = useState("");
+  const [senha, setSenha] = useState("");
 
   return (
     <form
       onSubmit={async e => {
         e.preventDefault();
-        createTodo(text);
-        setText("");
+        criarUsuario(nome, senha);
+        setNome("");
+        setSenha("");
       }}
       className={styles.addTodo}
     >
       <input
         className={styles.input}
-        placeholder="Buy some milk"
-        value={text}
-        onChange={e => setText(e.target.value)}
+        placeholder="Nome"
+        value={nome}
+        onChange={e => setNome(e.target.value)}
       />
-      <button className={styles.addButton}>Add</button>
+      <input
+        className={styles.input}
+        placeholder="Senha"
+        value={nome}
+        onChange={e => setNome(e.target.value)}
+      />
+      <button className={styles.addButton}>Adicionar</button>
     </form>
   );
 };
@@ -76,11 +77,7 @@ const Home: NextPage = () => {
       </Head>
 
       <header className={styles.header}>
-        <h1 className={styles.title}>Todos</h1>
-        <h2 className={styles.desc}>
-          NextJS app connected to Postgres using Prisma and hosted on{" "}
-          <a href="https://railway.app">Railway</a>
-        </h2>
+        <h1 className={styles.title}>Usuários</h1>
       </header>
 
       <main className={styles.main}>
