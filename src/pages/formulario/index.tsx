@@ -1,67 +1,114 @@
 import { NextPage } from "next";
 import styles from "../../styles/Formulario.module.css";
 import { useState } from "react";
+import { criarFormulario } from "../../api";
 
 const Formulario: NextPage = () => {
-  const [valueSelectAnimal, setValueSelectAnimal] = useState("0");
-
-  const submitFormulario = (e: any) => {
-    e.preventDefault();
-
-    console.log("davi gay");
-  };
+  const [nome, setNome] = useState("");
+  const [sobrenome, setSobrenome] = useState("");
+  const [email, setEmail] = useState("");
+  const [telefone, setTelefone] = useState("");
+  const [nomePet, setNomePet] = useState("");
+  const [especie, setEspecie] = useState("0");
+  const [racaCachorro, setRacaCachorro] = useState("0");
+  const [racaGato, setRacaGato] = useState("0");
 
   return (
     <div className={styles.container}>
-      <form className={styles.main} onSubmit={submitFormulario}>
+      <form
+        className={styles.main}
+        onSubmit={async (e) => {
+          e.preventDefault();
+          criarFormulario(
+            nome,
+            sobrenome,
+            email,
+            telefone,
+            nomePet,
+            especie,
+            racaCachorro
+          );
+        }}
+      >
         <h1>Formulário Veterinario</h1>
         <h2>Informações do Proprietário:</h2>
 
         <label htmlFor="nome">
           <strong>Nome:</strong>
         </label>
-        <input type="text" name="nome" className={styles.input} />
+        <input
+          type="text"
+          name="nome"
+          className={styles.input}
+          onChange={(evento) => setNome(evento.target.value)}
+        />
 
         <label htmlFor="sobrenome">
           <strong>Sobrenome:</strong>
         </label>
-        <input type="text" name="sobrenome" className={styles.input} />
+        <input
+          type="text"
+          name="sobrenome"
+          className={styles.input}
+          onChange={(evento) => setSobrenome(evento.target.value)}
+        />
 
         <label htmlFor="email">
           <strong>Email:</strong>
         </label>
-        <input type="email" className={styles.input} />
+        <input
+          type="email"
+          className={styles.input}
+          onChange={(evento) => setEmail(evento.target.value)}
+        />
 
-        <label htmlFor="numero">
+        <label htmlFor="telefone">
           <strong>Numero:</strong>
         </label>
-        <input type="number" name="tel" className={styles.input} />
+        <input
+          type="number"
+          name="telefone"
+          className={styles.input}
+          onChange={(evento) => setTelefone(evento.target.value)}
+        />
 
         <h2>Informações do paciente:</h2>
-        <label htmlFor="nome">
+        <label htmlFor="nomePet">
           <strong>Nome do pet:</strong>
         </label>
-        <input type="text" name="nome" className={styles.input} />
+        <input
+          type="text"
+          name="nomePet"
+          className={styles.input}
+          onChange={(evento) => setNomePet(evento.target.value)}
+        />
 
         <label htmlFor="selectAnimal">
           <strong>Escolha um animal:</strong>
         </label>
         <select
           id="selectAnimal"
-          onChange={(evento) => setValueSelectAnimal(evento.target.value)}
           className={styles.select}
+          onChange={(evento) => setEspecie(evento.target.value)}
         >
           <option value="0">Selecione</option>
           <option value="1">Cachorro</option>
           <option value="2">Gato</option>
         </select>
 
-        {valueSelectAnimal == "1" && (
+        {especie == "1" && (
           <>
             <label htmlFor="selectRacaCachorro">
               <strong>Escolha a raça do cachorro:</strong>
             </label>
-            <select id="selectRacaCachorro" className={styles.select}>
+            <select
+              id="selectRacaCachorro"
+              className={styles.select}
+              onChange={(evento) => {
+                setRacaCachorro(evento.target.value);
+                console.log(evento.target.value);
+              }}
+            >
               <option value="0">Caramelo</option>
               <option value="1">Poodle</option>
               <option value="2">Labrador Retriever</option>
@@ -77,12 +124,16 @@ const Formulario: NextPage = () => {
           </>
         )}
 
-        {valueSelectAnimal == "2" && (
+        {especie == "2" && (
           <>
             <label htmlFor="selectRacaGato">
               <strong>Escolha a raça do gato:</strong>
             </label>
-            <select id="selectRacaGato" className={styles.select}>
+            <select
+              id="selectRacaGato"
+              className={styles.select}
+              onChange={(evento) => setRacaGato(evento.target.value)}
+            >
               <option value="0">Vira-lata</option>
               <option value="1">Siamese</option>
               <option value="2">Persa</option>

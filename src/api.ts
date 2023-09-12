@@ -1,11 +1,13 @@
 import useSWR, { mutate } from "swr";
-import { Usuario } from "./types";
+import { Usuario, Formulario } from "./types";
 
 const fetcher = (input: RequestInfo, init?: RequestInit) =>
   fetch(input, init).then((res) => res.json());
 
 const usuarioPath = "/api/usuarios";
+const formularioPath = "/api/formularios";
 
+//Usuario
 export const useUsuarios = () => useSWR<Usuario[]>(usuarioPath, fetcher);
 
 export const criarUsuario = async (nome: string, senha: string) => {
@@ -26,8 +28,8 @@ export const toggleUsuario = async (usuario: Usuario) => {
   mutate(
     usuarioPath,
     usuarios =>
-      usuarios.map(t =>
-        t.id === usuario.id ? { ...usuario, completed: !t.completed } : t,
+      usuarios.map(u =>
+        u.id === usuario.id ? { ...usuario, senha: '0000' } : u,
       ),
     false,
   );
@@ -39,7 +41,71 @@ export const toggleUsuario = async (usuario: Usuario) => {
 };
 
 export const deleteUsuario = async (id: string) => {
-  mutate(usuarioPath, usuarios => usuarios.filter(t => t.id !== id), false);
+  mutate(usuarioPath, usuarios => usuarios.filter(u => u.id !== id), false);
   await fetch(`${usuarioPath}?usuarioId=${id}`, { method: "DELETE" });
   mutate(usuarioPath);
+};
+
+//Formulario
+export const useFormularios = () => useSWR<Formulario[]>(formularioPath, fetcher);
+
+export const criarFormulario = async (
+  nome: string,
+  sobrenome: string,
+  email: string,
+  telefone: string,
+  nomePet: string,
+  especie: string,
+  raca: string) => {
+  mutate(
+    formularioPath,
+    // formularios => [
+    {
+      nome: nome,
+      sobrenome: sobrenome,
+      email: email,
+      telefone: telefone,
+      nomePet: nomePet,
+      especie: especie,
+      raca: raca
+    }
+    // , ...formularios]
+    , false,
+  );
+  await fetch(formularioPath, {
+    method: "POST",
+    body: JSON.stringify({
+      nome: nome,
+      sobrenome: sobrenome,
+      email: email,
+      telefone: telefone,
+      nomePet: nomePet,
+      especie: especie,
+      raca: raca
+    }),
+  });
+
+  mutate(formularioPath);
+};
+
+export const toggleformulario = async (formularioToToggle: Formulario) => {
+  mutate(
+    formularioPath,
+    formularios =>
+      formularios.map(formulario =>
+        formulario.id === formulario.id ? { ...formularioToToggle, nome: 'Teste' } : formulario,
+      ),
+    false,
+  );
+  await fetch(`${formularioPath}?formularioId=${formularioToToggle.id}`, {
+    method: "PUT",
+    body: JSON.stringify({}),
+  });
+  mutate(formularioPath);
+};
+
+export const deleteFormulario = async (id: string) => {
+  mutate(formularioPath, formularios => formularios.filter(f => f.id !== id), false);
+  await fetch(`${formularioPath}?formularioId=${id}`, { method: "DELETE" });
+  mutate(formularioPath);
 };

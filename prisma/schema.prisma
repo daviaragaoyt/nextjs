@@ -18,7 +18,7 @@ model Usuario {
 }
 
 model Formulario {
-  id        String @id @default(uuid())
+  id        String   @id @default(uuid())
   nome      String
   sobrenome String
   email     String
@@ -26,4 +26,5 @@ model Formulario {
   nomePet   String
   especie   String
   raca      String
+  criadoEm  DateTime @default(now())
 }
