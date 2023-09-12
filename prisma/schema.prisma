@@ -16,3 +16,14 @@ model Usuario {
   senha    String
   criadoEm DateTime @default(now())
 }
+
+model Formulario {
+  id        String @id @default(uuid())
+  nome      String
+  sobrenome String
+  email     String
+  telefone  String
+  nomePet   String
+  especie   String
+  raca      String
+}

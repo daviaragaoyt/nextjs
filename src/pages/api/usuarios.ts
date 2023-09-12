@@ -4,6 +4,7 @@ import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
+  console.log('req:', req)
   if (req.method === "GET") {
     // get all usuarios
     const usuarios = await prisma.usuario.findMany({

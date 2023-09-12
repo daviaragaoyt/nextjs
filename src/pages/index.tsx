@@ -3,7 +3,7 @@ import Head from "next/head";
 import { useMemo, useState } from "react";
 import {
   criarUsuario as criarUsuario,
-  deleteTodo as deletarUsuario,
+  deleteUsuario as deletarUsuario,
   toggleUsuario,
   useUsuarios,
 } from "../api";
