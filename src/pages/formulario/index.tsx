@@ -30,11 +30,12 @@ const Formulario: NextPage = () => {
           );
         }}
       >
-        <h1>Formulário Veterinario</h1>
-        <h2>Informações do Proprietário:</h2>
+        <div className={styles.box}>
+        <h1 className="Titulo">Formulário Veterinario</h1>
+        <h2 className="Subtitulo">Informações do Proprietário:</h2>
 
         <label htmlFor="nome">
-          <strong>Nome:</strong>
+          <strong className="strong">Nome:</strong>
         </label>
         <input
           type="text"
@@ -44,7 +45,7 @@ const Formulario: NextPage = () => {
         />
 
         <label htmlFor="sobrenome">
-          <strong>Sobrenome:</strong>
+          <strong className="strong">Sobrenome:</strong>
         </label>
         <input
           type="text"
@@ -54,7 +55,7 @@ const Formulario: NextPage = () => {
         />
 
         <label htmlFor="email">
-          <strong>Email:</strong>
+          <strong className="strong">Email:</strong>
         </label>
         <input
           type="email"
@@ -63,7 +64,7 @@ const Formulario: NextPage = () => {
         />
 
         <label htmlFor="telefone">
-          <strong>Numero:</strong>
+          <strong className="strong">Numero:</strong>
         </label>
         <input
           type="number"
@@ -72,9 +73,9 @@ const Formulario: NextPage = () => {
           onChange={(evento) => setTelefone(evento.target.value)}
         />
 
-        <h2>Informações do paciente:</h2>
+        <h2 className="Subtitulo">Informações do paciente:</h2>
         <label htmlFor="nomePet">
-          <strong>Nome do pet:</strong>
+          <strong className="strong">Nome do pet:</strong>
         </label>
         <input
           type="text"
@@ -84,7 +85,7 @@ const Formulario: NextPage = () => {
         />
 
         <label htmlFor="selectAnimal">
-          <strong>Escolha um animal:</strong>
+          <strong className="strong">Escolha um animal:</strong>
         </label>
         <select
           id="selectAnimal"
@@ -92,14 +93,14 @@ const Formulario: NextPage = () => {
           onChange={(evento) => setEspecie(evento.target.value)}
         >
           <option value="0">Selecione</option>
-          <option value="1">Cachorro</option>
-          <option value="2">Gato</option>
+          <option value="Cachorro">Cachorro</option>
+          <option value="Gato">Gato</option>
         </select>
 
-        {especie == "1" && (
+        {especie == "Cachorro" && (
           <>
             <label htmlFor="selectRacaCachorro">
-              <strong>Escolha a raça do cachorro:</strong>
+              <strong className="strong">Escolha a raça do cachorro:</strong>
             </label>
             <select
               id="selectRacaCachorro"
@@ -124,10 +125,10 @@ const Formulario: NextPage = () => {
           </>
         )}
 
-        {especie == "2" && (
+        {especie == "Gato" && (
           <>
             <label htmlFor="selectRacaGato">
-              <strong>Escolha a raça do gato:</strong>
+              <strong className="strong">Escolha a raça do gato:</strong>
             </label>
             <select
               id="selectRacaGato"
@@ -142,7 +143,7 @@ const Formulario: NextPage = () => {
               <option value="5">Ragdoll</option>
               <option value="6">Bengal</option>
               <option value="7">Burmês</option>
-              <option value="7">Outro</option>
+              <option value="8">Outro</option>
             </select>
           </>
         )}
@@ -150,6 +151,7 @@ const Formulario: NextPage = () => {
         <button type="submit" className={styles.button}>
           SALVAR
         </button>
+        </div>
       </form>
     </div>
   );

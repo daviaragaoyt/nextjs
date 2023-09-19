@@ -1,131 +1,111 @@
-.container {
-  padding: 0 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap');
+
+.body {
+  background-image: url("https://www.uniceplac.edu.br/app/uploads/2021/06/gHL5G4ZToBmXUsTodFDTYNhXpHbzlwgDIZwAVwcC-1024x1024.png");
+  background-position: center;
+  justify-content: space-around;
+  background-size: cover;
+  margin: 0;
+  width: 100%;
+  outline: 0;
+}
+
+.strong {
+  color: #fff;
 }
 
 .header {
-  padding: 4rem 0 2rem 0;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
-.main {
-  flex: 1;
+.container {
+
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.login {
+  width: 80%;
+  max-width: 600px;
+  height: 50%;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 500px;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-  font-weight: bold;
-}
-
-.title,
-.desc {
-  text-align: center;
-}
-
-.desc {
-  line-height: 1.5;
-  font-size: 1rem;
-  font-weight: normal;
-}
-
-.addTodo {
-  display: flex;
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 2rem;
+  background: #29212110;
+  border: 2px solid black;
+  backdrop-filter: blur(20px);
 }
 
 .input {
-  padding: 1rem;
-  border: solid 2px;
-  border-color: #cccccc;
-  border-radius: 4px;
-  flex-grow: 1;
-  margin-right: 0.5rem;
-  font-size: 1em;
-}
-
-.addButton {
-  width: 80px;
   color: white;
-  background-color: #0070f3;
-  border-color: #0070f3;
-  font-size: 1em;
-  border: solid 2px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.addButton:hover {
-  color: #0070f3;
-  background-color: white;
-  border-color: #0070f3;
-}
-
-.code {
-  background: #fafafa;
+  width: 90%;
+  height: 50px;
   border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  margin: 10px 0;
+  border: transparent;
+  background: #e67e22;
 }
 
-.todoList {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+.input:hover {
+  border-radius: 20px;
+  box-shadow: 0 0 15px transparent;
+  text-shadow: 0 0 15px transparent;
+  transition: 0.7s;
+  cursor: pointer;
+  background-color: #1e6443;
 }
 
-.todo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.submit {
+  height: 50px;
+  background-color: #e67e22;
+}
+
+.submit:hover {
+  box-shadow: 0 0 15px;
+  text-shadow: 0 0 15px;
+  transition: 1s;
+  border-radius: 20px;
+  background-color: #1e6443;
+}
+
+.select {
+  color: white;
+  width: 90%;
+  height: 60px;
+  border-radius: 5px;
+  margin: 10px 0;
+  border: transparent;
+  background: #e67e22;
+}
+
+.h1 {
+  font-size: larger;
+  color: white;
+}
+
+.h2 {
+  font-size: larger;
+  color: white;
 }
 
 .label {
-  flex-grow: 1;
-  font-size: 1.1rem;
-  padding: 0.5rem 0;
-  cursor: pointer;
+  font-size: larger;
+  color: white;
 }
 
-.checkbox {
-  margin-right: 1rem;
-}
-
-.checked {
-  text-decoration: line-through;
-}
-
-.deleteButton {
-  font-size: 1rem;
-  border: none;
-  background: none;
-  color: darkgrey;
-  cursor: pointer;
-}
-
-.deleteButton:hover {
-  color: var(--primary);
-}
-
-.emptyState {
-}
-
-@media (max-width: 600px) {
-  .main {
-    min-width: auto;
+@media screen and(max-width:768px) {
+  .body {
     width: 100%;
+    flex-direction: column;
   }
 }

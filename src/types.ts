@@ -15,4 +15,5 @@ export interface Formulario {
   especie: string;
   raca: string;
   criadoEm: string;
+  Genero:string;
 }

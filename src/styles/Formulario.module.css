@@ -1,149 +1,100 @@
 .container {
-  padding: 0 0.5rem;
+  width: 100%;
+  height: 1000px;
+  background-size: cover;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-/* .header {
-  padding: 4rem 0 2rem 0;
-} */
+.Logo{
+  width: 100px;
+  background-image: url("https://www.uniceplac.edu.br/app/themes/default/dist/images/logos/logo_b0eb422c.svg");
+}
 
-.main {
-  flex: 1;
+
+.box {  
+  width: 380px;
+  height: 100%;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 500px;
+  background: #29212110;
+  border: 5px solid black;
+  backdrop-filter: blur(20px);
 }
 
 .input {
-  width: 50%;
+  color: white;
+  width: 90%;
+  height: 50px;
+  border-radius: 5px;
+  margin: 10px 0;
+  border: transparent;
+  background: #e67e22;
+}
+
+.input:hover {
+  border-radius: 20px;
+  box-shadow: 0 0 15px transparent;
+  text-shadow: 0 0 15px transparent;
+  transition: 0.7s;
+  cursor: pointer;
+  background-color: #1e6443;
 }
 
 .select {
-  width: 50%;
-}
-
-.button {
-  margin: 10px;
   color: white;
-  background-color: #0070f3;
-  font-size: 1em;
-  border: solid 2px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-/* .title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-  font-weight: bold;
-}
-
-.title,
-.desc {
-  text-align: center;
-}
-
-.desc {
-  line-height: 1.5;
-  font-size: 1rem;
-  font-weight: normal;
-}
-
-.addTodo {
-  display: flex;
-  width: 100%;
-  margin: 0 auto;
-  margin-bottom: 2rem;
-}
-
-.input {
-  padding: 1rem;
-  border: solid 2px;
-  border-color: #cccccc;
-  border-radius: 4px;
-  flex-grow: 1;
-  margin-right: 0.5rem;
-  font-size: 1em;
-}
-
-.addButton {
-  width: 80px;
-  color: white;
-  background-color: #0070f3;
-  border-color: #0070f3;
-  font-size: 1em;
-  border: solid 2px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.addButton:hover {
-  color: #0070f3;
-  background-color: white;
-  border-color: #0070f3;
-}
-
-.code {
-  background: #fafafa;
+  width: 90%;
+  height: 60px;
   border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  margin: 10px 0;
+  border: transparent;
+  background: #e67e22;
 }
 
-.todoList {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+.Titulo {
+  font-size: larger;
+  color: white;
 }
 
-.todo {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.Subtitulo {
+  font-size: larger;
+  color: white;
 }
 
 .label {
-  flex-grow: 1;
-  font-size: 1.1rem;
-  padding: 0.5rem 0;
+  font-size: larger;
+  color: white;
+}
+
+.button {
+  color: white;
+  width: 90%;
+  height: 50px;
+  border-radius: 5px;
+  margin: 10px 0;
+  border: transparent;
+  background: #e67e22;
+}
+
+.button:hover {
+  border-radius: 20px;
+  box-shadow: 0 0 15px transparent;
+  text-shadow: 0 0 15px transparent;
+  transition: 0.7s;
   cursor: pointer;
+  background-color: #1e6443;
 }
 
-.checkbox {
-  margin-right: 1rem;
-}
 
-.checked {
-  text-decoration: line-through;
-}
-
-.deleteButton {
-  font-size: 1rem;
-  border: none;
-  background: none;
-  color: darkgrey;
-  cursor: pointer;
-}
-
-.deleteButton:hover {
-  color: var(--primary);
-}
-
-.emptyState {
-}
-
-@media (max-width: 600px) {
-  .main {
-    min-width: auto;
+@media screen and(max-width:768px) {
+  .body {
+    background-position: center;
     width: 100%;
+    height: 100%;
+    flex-direction: column;
   }
-} */
+}
