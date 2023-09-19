@@ -110,17 +110,17 @@ const Formulario: NextPage = () => {
                 console.log(evento.target.value);
               }}
             >
-              <option value="0">Caramelo</option>
-              <option value="1">Poodle</option>
-              <option value="2">Labrador Retriever</option>
-              <option value="3">Bulldog Inglês</option>
-              <option value="4">Yorkshire Terrier</option>
-              <option value="5">Shih Tzu</option>
-              <option value="6">Chihuahua</option>
-              <option value="7">Golden Retriever</option>
-              <option value="8">Rottweiler</option>
-              <option value="9">Bulldog Francês</option>
-              <option value="10">Outro</option>
+              <option value="Caramelo">Caramelo</option>
+              <option value="Poodle">Poodle</option>
+              <option value="Labrador Retriever">Labrador Retriever</option>
+              <option value="Bulldog Inglês">Bulldog Inglês</option>
+              <option value="Yorkshire Terrier">Yorkshire Terrier</option>
+              <option value="Shih Tzu">Shih Tzu</option>
+              <option value="Chihuahua">Chihuahua</option>
+              <option value="Golden Retriever">Golden Retriever</option>
+              <option value="Rottweiler">Rottweiler</option>
+              <option value="Bulldog Francês">Bulldog Francês</option>
+              <option value="Outro">Outro</option>
             </select>
           </>
         )}
@@ -135,15 +135,15 @@ const Formulario: NextPage = () => {
               className={styles.select}
               onChange={(evento) => setRacaGato(evento.target.value)}
             >
-              <option value="0">Vira-lata</option>
-              <option value="1">Siamese</option>
-              <option value="2">Persa</option>
-              <option value="3">Maine Coon</option>
-              <option value="4">Sphynx</option>
-              <option value="5">Ragdoll</option>
-              <option value="6">Bengal</option>
-              <option value="7">Burmês</option>
-              <option value="8">Outro</option>
+              <option value="Não sei">Não sei</option>
+              <option value="Siamese">Siamese</option>
+              <option value="Persa">Persa</option>
+              <option value="Maine Coon">Maine Coon</option>
+              <option value="Sphynx">Sphynx</option>
+              <option value="Ragdoll">Ragdoll</option>
+              <option value="Bengal">Bengal</option>
+              <option value="Burmês">Burmês</option>
+              <option value="Outro">Outro</option>
             </select>
           </>
         )}
