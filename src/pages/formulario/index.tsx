@@ -149,7 +149,7 @@ const Formulario: NextPage = () => {
         )}
 
         <button type="submit" className={styles.button}>
-          SALVAR
+          <strong>SALVAR</strong>
         </button>
         </div>
       </form>
