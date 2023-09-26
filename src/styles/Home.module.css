@@ -1,5 +1,3 @@
-
-
 .body {
   background-image: url("https://www.uniceplac.edu.br/app/uploads/2021/06/gHL5G4ZToBmXUsTodFDTYNhXpHbzlwgDIZwAVwcC-1024x1024.png");
   width: 100%;
@@ -7,19 +5,19 @@
   font-family: "Roboto", sans-serif;
   margin: 0;
   justify-content: space-around;
- /*define a área de margem nos quatro lador do elemento*/
- margin: 0;
- /*distância entre o conteúdo de um elemento e suas bordas*/
- padding: 0;
- /*para configurar uma ou mais das propriedades de contorno*/
- outline: 0;
- 
+  /*define a área de margem nos quatro lador do elemento*/
+  margin: 0;
+  /*distância entre o conteúdo de um elemento e suas bordas*/
+  padding: 0;
+  /*para configurar uma ou mais das propriedades de contorno*/
+  outline: 0;
+
 
 }
 
 .turminha {
   margin-top: 10px;
-  width: 70%;
+  width: 100%;
   border: 5px solid #d68749;
 
 }
@@ -59,7 +57,7 @@
   /*espaçamento inferior*/
   padding-top: 32px;
   /*espaçamento superior*/
-  height: 5px;
+  height: 100%px;
   background-color: #3b7355;
 
 }
@@ -113,7 +111,8 @@ centro do browser. O container é invisível.*/
 }
 
 .subcontainer-principal {
-
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -231,8 +230,8 @@ centro do browser. O container é invisível.*/
   transition: 0.5s;
 }
 
-.Alert{
- width: 100px;
+.Alert {
+  width: 100px;
   margin-bottom: 5px;
   font-size: 22px;
   color: red;

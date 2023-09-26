@@ -13,11 +13,9 @@ const Home: NextPage = () => {
         <Navbar/>
             <section className="principal">
                 <article className="subcontainer-principal">
-                    <div>
                         <br/>
                         <Image src={pessoas} className="turminha" alt="pessoas"
-                            width={200} height={500}/>
-                    </div>
+                            width={1000} height={1000}/>    
                     <div>
                         <h1 className="nome-completo">RV&Pets</h1>
                         <h2 className="criador">Feito pela turma de ADS</h2>
