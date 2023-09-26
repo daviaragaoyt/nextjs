@@ -1,18 +1,36 @@
 import { NextPage } from "next";
 import styles from "../styles/Home.module.css";
-const urlDestino="https://nextjs-ebon-delta-53.vercel.app/formulario";
+import logo from './logo.png';
+import pessoas from './pessoas.png';
+import Image from "next/image";
+const urlDestino='https://nextjs-ebon-delta-53.vercel.app/formulario';
 const Home: NextPage = () => {
-  
   return (
-    <div className={styles.container}>
+    <body className="body">
+  
+    <header className="header-menu">
+        <nav>
+            <Image src={logo} className="logo" alt="logo" width={100}/>
+            <ul className="lista-menu">
+                <li className="menu li">
+                    <a href="#Home">Home</a>
+                </li>
+                <li className="menu li">
+                    <a href="#informacao">Informações</a>
+                </li>
+                <li className="menu li">
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
        <main>
             <section className="principal">
                 <article className="subcontainer-principal">
                     <div>
                         <br/>
-                        <img className={styles.turminha}
-                            src="IMG/pessoas.jpeg"
-                            width="400px"/>
+                        <Image src={pessoas} className="turminha" alt="pessoas"
+                            width={200} height={500}/>
                     </div>
                     <div>
                         <h1 className="nome-completo">RV&Pets</h1>
@@ -37,7 +55,7 @@ const Home: NextPage = () => {
                     </div>
                     <div className="lista-item">
                         <ul>
-                            <li className="menu li>a">
+                            <li className="menu li">
                                 <p className="lista-titulo">Bem-vindo ao RV&Pets:
                                     Seu Portal de Saúde Animal!</p>
                                 <p className="lista-descricao">Projeto Criado
@@ -45,7 +63,7 @@ const Home: NextPage = () => {
                                     facilitar seu cadastro
                                 </p>
                             </li>
-                            <li>
+                            <li className="menu li">
                                 <p className="lista-descricao">
                                     No RV&Pets, estamos dedicados a promover a
                                     saúde e o bem-estar de seus companheiros
@@ -99,7 +117,7 @@ const Home: NextPage = () => {
                     </div>
                     <div className="lista-item">
                         <ul>
-                            <li>
+                            <li className="menu li">
                                 <p className="lista-titulo">Avisos importantes sobre
                                     o cadastro</p>
                                 <p className="lista-descricao"> Ao preencher um
@@ -154,7 +172,18 @@ const Home: NextPage = () => {
                 </article>
             </section>
         </main>
-    </div>
+
+
+        <footer className="footer">
+            <div className="container">
+                <ul id="contato">
+                    <li className="menu li"><a href="secretaria.academica@uniceplac.edu.br" className="email">Email</a></li>
+                    <li className="menu li"><a href="tel:613035900" className="telefone">(61) 3035-3900</a></li>
+                    <li className="menu li"><a href="https://www.uniceplac.edu.br" className="site">Site Oficial</a></li>
+                </ul>
+            </div>
+        </footer>
+        </body>
   );
 };
 

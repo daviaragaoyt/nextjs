@@ -1,11 +1,19 @@
 
+
 .body {
+  background-image: url("https://www.uniceplac.edu.br/app/uploads/2021/06/gHL5G4ZToBmXUsTodFDTYNhXpHbzlwgDIZwAVwcC-1024x1024.png");
+  width: 100%;
   /*definindo a fonte de todo o nosso body*/
   font-family: "Roboto", sans-serif;
   margin: 0;
   justify-content: space-around;
-  width: 100%;
-  
+ /*define a área de margem nos quatro lador do elemento*/
+ margin: 0;
+ /*distância entre o conteúdo de um elemento e suas bordas*/
+ padding: 0;
+ /*para configurar uma ou mais das propriedades de contorno*/
+ outline: 0;
+ 
 
 }
 
@@ -23,6 +31,7 @@
 }
 
 .logo {
+  background-image: url("./src/pages/logo.png");
   display: flex;
   position: fixed;
   width: 60px;
@@ -137,7 +146,7 @@ centro do browser. O container é invisível.*/
 
 .lista-local {
   font-size: 18px;
-  color: #2f80ed;
+  color: white;
 }
 
 .lista-descricao {
@@ -173,6 +182,7 @@ centro do browser. O container é invisível.*/
 
 .footer {
   background-color: #3b7355;
+  color: #fff;
   height: 30vh;
   display: flex;
   align-items: center;
