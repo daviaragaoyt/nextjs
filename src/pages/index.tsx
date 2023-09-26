@@ -1,30 +1,16 @@
+import { Container } from "@chakra-ui/react";
 import { NextPage } from "next";
-import styles from "../styles/Home.module.css";
-import logo from './logo.png';
-import pessoas from './pessoas.png';
 import Image from "next/image";
-const urlDestino='https://nextjs-ebon-delta-53.vercel.app/formulario';
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import pessoas from '../../public/pessoas.png';
+
 const Home: NextPage = () => {
+    const urlDestino='https://nextjs-ebon-delta-53.vercel.app/formulario';
+
   return (
-    <body className="body">
-  
-    <header className="header-menu">
-        <nav>
-            <Image src={logo} className="logo" alt="logo" width={100}/>
-            <ul className="lista-menu">
-                <li className="menu li">
-                    <a href="#Home">Home</a>
-                </li>
-                <li className="menu li">
-                    <a href="#informacao">Informações</a>
-                </li>
-                <li className="menu li">
-                    <a href="#contato">Contato</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-       <main>
+    <Container>
+        <Navbar/>
             <section className="principal">
                 <article className="subcontainer-principal">
                     <div>
@@ -56,15 +42,15 @@ const Home: NextPage = () => {
                     <div className="lista-item">
                         <ul>
                             <li className="menu li">
-                                <p className="lista-titulo">Bem-vindo ao RV&Pets:
-                                    Seu Portal de Saúde Animal!</p>
-                                <p className="lista-descricao">Projeto Criado
+                                <h1 className="lista-titulo">Bem-vindo ao RV&Pets:
+                                    Seu Portal de Saúde Animal!</h1>
+                                <h1 className="lista-descricao">Projeto Criado
                                     para com intuito de ajudar a comunidade e
                                     facilitar seu cadastro
-                                </p>
+                                </h1>
                             </li>
                             <li className="menu li">
-                                <p className="lista-descricao">
+                                <h1 className="lista-descricao">
                                     No RV&Pets, estamos dedicados a promover a
                                     saúde e o bem-estar de seus companheiros
                                     peludos, emplumados ou escamados. Somos
@@ -103,7 +89,7 @@ const Home: NextPage = () => {
                                     chegada de segunda a sexta-feira das 8h às
                                     11h e 14h às 21h. Informações pelo telefone
                                     das 8h às 22h.
-                                </p>
+                                </h1>
                                 
                             </li>
                         </ul>
@@ -118,9 +104,9 @@ const Home: NextPage = () => {
                     <div className="lista-item">
                         <ul>
                             <li className="menu li">
-                                <p className="lista-titulo">Avisos importantes sobre
-                                    o cadastro</p>
-                                <p className="lista-descricao"> Ao preencher um
+                                <h1 className="lista-titulo">Avisos importantes sobre
+                                    o cadastro</h1>
+                                <h1 className="lista-descricao"> Ao preencher um
                                     formulário veterinário para o seu amiguinho
                                     peludo, é essencial fornecer informações
                                     detalhadas e precisas para garantir o melhor
@@ -136,7 +122,7 @@ const Home: NextPage = () => {
                                     vezes, por isso atente-se.
                                     <br/>
                                     <br/>
-                                    <p className="Alert">Atenção</p><p
+                                    <h1 className="Alert">Atenção</h1><h1
                                         className="lista-descricao"> As
                                         consultas não são gratuitas,para mais
                                         informações contate-nos.
@@ -144,7 +130,7 @@ const Home: NextPage = () => {
                                         <br/>
                                         Aqui estão alguns dos principais
                                         itens que podem ser solicitados em um
-                                        formulário veterinário:</p>
+                                        formulário veterinário:</h1>
 
                                     <br/>
                                     <br/>
@@ -161,7 +147,7 @@ const Home: NextPage = () => {
                                         <li>Espécie(apenas cão ou gato) e</li>
                                         <li>Raça;</li>
                                     </ul>
-                                </p>
+                                </h1>
                             </li>
                             <a className="styles.link-cad"
                                 href={urlDestino} target="_blank" rel="noopener noreferrer">
@@ -171,20 +157,14 @@ const Home: NextPage = () => {
                     </div>
                 </article>
             </section>
-        </main>
-
-
-        <footer className="footer">
-            <div className="container">
-                <ul id="contato">
-                    <li className="menu li"><a href="secretaria.academica@uniceplac.edu.br" className="email">Email</a></li>
-                    <li className="menu li"><a href="tel:613035900" className="telefone">(61) 3035-3900</a></li>
-                    <li className="menu li"><a href="https://www.uniceplac.edu.br" className="site">Site Oficial</a></li>
-                </ul>
-            </div>
-        </footer>
-        </body>
+        <Footer/>
+      
+        </Container>
   );
 };
 
 export default Home;
+function setIsClient(arg0: boolean) {
+    throw new Error("Function not implemented.");
+}
+
