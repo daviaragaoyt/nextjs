@@ -139,6 +139,8 @@ const Home: NextPage = () => {
                                  <li>Nome do animal de estimação;</li>
                                  <li>Espécie(apenas cão ou gato) e</li>
                                  <li>Raça;</li>
+                                 <li>Tipo de cirurgia;</li>
+                                 <li>E se é a primeira vez usando nossos serviços.</li>
                               </ul>
                            </h1>
                         </li>

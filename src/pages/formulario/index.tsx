@@ -1,11 +1,11 @@
-import { NextPage } from 'next'
-import styles from '../../styles/Formulario.module.css'
-import { useState } from 'react'
-import { criarFormulario } from '../../api'
-import { Box } from '@chakra-ui/react'
-import Footer from '../../components/Footer'
-import Navbar from '../../components/Navbar'
-import Image from '../../../public/logo.png'
+import { NextPage } from 'next';
+import styles from '../../styles/Formulario.module.css';
+import { useState } from 'react';
+import { criarFormulario } from '../../api';
+import { Box } from '@chakra-ui/react';
+import Footer from '../../components/Footer';
+import Navbar from '../../components/Navbar';
+import Image from '../../../public/logo.png';
 
 const Formulario: NextPage = () => {
    const [nome, setNome] = useState('')
