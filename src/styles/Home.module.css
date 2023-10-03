@@ -1,240 +1,259 @@
-.body {
-  background-image: url("https://www.uniceplac.edu.br/app/uploads/2021/06/gHL5G4ZToBmXUsTodFDTYNhXpHbzlwgDIZwAVwcC-1024x1024.png");
-  width: 100%;
-  /*definindo a fonte de todo o nosso body*/
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-  justify-content: space-around;
-  /*define a área de margem nos quatro lador do elemento*/
-  margin: 0;
-  /*distância entre o conteúdo de um elemento e suas bordas*/
-  padding: 0;
-  /*para configurar uma ou mais das propriedades de contorno*/
-  outline: 0;
-
-
+/*primeiras propriedades:*/
+* {
+    /*define a área de margem nos quatro lador do elemento*/
+    margin: 0;
+    /*distância entre o conteúdo de um elemento e suas bordas*/
+    padding: 0;
+    /*para configurar uma ou mais das propriedades de contorno*/
+    outline: 0;
 }
 
-.turminha {
-  margin-top: 10px;
-  width: 100%;
-  border: 5px solid #d68749;
+body {
+    /*definindo a fonte de todo o nosso body*/
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    justify-content: space-around;
+    width: 100%;
+}
 
+
+
+.turminha {
+    margin: 20px 60px;
+    margin-top: 10%;
+    width: 80%;
+    border: 5px solid #d68749;
 }
 
 .turminha:hover {
-  border: 5px solid #1e6443;
-  border-radius: 25px;
-  transition: 1s;
+    border: 5px solid #1e6443;
+    border-radius: 25px;
+    transition: 1s;
 }
 
 .logo {
-  background-image: url("./src/pages/logo.png");
-  display: flex;
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  top: 5px;
-  left: 50px;
+    display: flex;
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    top: 5px;
+    left: 50px;
 }
 
-
-.li {
-  /*retirando as bolinhas das nossas listas*/
-  list-style: none;
+li {
+    /*retirando as bolinhas das nossas listas*/
+    list-style: none;
 }
 
 .header-menu {
-  /*torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens*/
-  display: flex;
-  position: fixed;
-  /*deixa o nosso header fixo*/
-  width: 100%;
-  /*largura*/
-  padding: 8px;
-  /*espaçamento dos 4 lados*/
-  padding-bottom: 32px;
-  /*espaçamento inferior*/
-  padding-top: 32px;
-  /*espaçamento superior*/
-  height: 100%px;
-  background-color: #3b7355;
-
+    /*torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens*/
+    display: flex;
+    position: fixed;
+    /*deixa o nosso header fixo*/
+    width: 100%;
+    /*largura*/
+    padding: 8px;
+    /*espaçamento dos 4 lados*/
+    padding-bottom: 32px;
+    /*espaçamento inferior*/
+    padding-top: 32px;
+    /*espaçamento superior*/
+    height: 5px;
+    background-color: #1e6443;
 }
 
 .header-menu nav {
-  /*elemento no html que aponta*/
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
+    /*elemento no html que aponta*/
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
 }
 
 .lista-menu {
-  display: flex;
-  justify-content: space-evenly;
-  /*espaçamento entre eles seja igual*/
-  width: 50%;
-  align-items: center;
-  padding-right: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    /*espaçamento entre eles seja igual*/
+    width: 50%;
+    align-items: center;
+    padding-right: 50px;
 }
 
 /*pegando os itens com tag a de dentro da nossa lista*/
 .lista-menu li>a {
-  color: #fff;
-  font-size: 18px;
-  text-decoration: inherit;
-  padding-right: 10px;
+    color: #fff;
+    font-size: 18px;
+    text-decoration: inherit;
+    padding-right: 10px;
 }
 
 .principal {
-  height: 100vh;
-  display: flex;
-  background-color: #eaeaea;
+    height: 100vh;
+    display: flex;
+    background-color: #eaeaea;
 }
 
 /*o container é um componente do Bootstrap que garante que o seu layout vai ficar alinhado corretamente na página.
-ele pode definir as margens laterais da página, ou deixar sem margens e, também, posiciona o conteúdo no
-centro do browser. O container é invisível.*/
+  ele pode definir as margens laterais da página, ou deixar sem margens e, também, posiciona o conteúdo no
+  centro do browser. O container é invisível.*/
 .container {
-  margin-right: auto;
-  /*uma margem automática para todos os lados*/
-  margin-left: auto;
-  /**/
-  max-width: 960px;
-  /*largura máxima*/
-  padding-right: 10px;
-  /*espaçamento direito*/
-  padding-left: 10px;
-  /*espaçamento esquerdo*/
-  width: 100%;
-  /*largura*/
+    margin-right: auto;
+    /*uma margem automática para todos os lados*/
+    margin-left: auto;
+    /**/
+    max-width: 960px;
+    /*largura máxima*/
+    padding-right: 10px;
+    /*espaçamento direito*/
+    padding-left: 10px;
+    /*espaçamento esquerdo*/
+    width: 100%;
+    /*largura*/
 }
 
 .subcontainer-principal {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .topico-principal {
-  font-size: 36px;
-  color: #1e6443;
+    font-size: 36px;
+    color: #1e6443;
 }
 
 .lista-item {
-  padding: 32px;
-  /*espaçamento dos 4 lados*/
+    padding: 32px;
+    /*espaçamento dos 4 lados*/
 }
 
 .lista-item ul li {
-  margin-bottom: 32px;
-  /*espaçamento entre os itens da nossa lista*/
+    margin-bottom: 32px;
+    /*espaçamento entre os itens da nossa lista*/
 }
 
 .lista-titulo {
-  margin-bottom: 5px;
-  /*espaçamento entre os itens da nossa lista*/
-  font-size: 22px;
-  color: #661e4b;
-  font-weight: 700;
+    margin-bottom: 5px;
+    /*espaçamento entre os itens da nossa lista*/
+    font-size: 22px;
+    color: #661e4b;
+    font-weight: 700;
 }
 
 .lista-local {
-  font-size: 18px;
-  color: white;
+    font-size: 18px;
+    color: #2f80ed;
 }
 
 .lista-descricao {
-  font-size: 18px;
-  margin-top: 5px;
-  line-height: 20px;
-  /*espaçamento entre as linhas*/
-  color: #828282;
-  font-weight: 300;
+    font-size: 18px;
+    margin-top: 5px;
+    line-height: 20px;
+    /*espaçamento entre as linhas*/
+    color: #828282;
+    font-weight: 300;
 }
 
 .wrapper-portfolio {
-  /*como se fosse o pacote do nosso portfolio*/
-  background-color: #eaeaea;
-  display: flex;
-  flex-direction: column;
+    /*como se fosse o pacote do nosso portfolio*/
+    background-color: #eaeaea;
+    display: flex;
+    flex-direction: column;
 }
 
 .article-lista {
-  display: flex;
+    display: flex;
 
-  margin-left: 0px;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  flex-direction: column;
+    margin-left: 0px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    flex-direction: column;
 }
 
 .subtitulo-lista {
-  font-size: 18px;
-  color: #828282;
-  font-weight: 500;
+    font-size: 18px;
+    color: #828282;
+    font-weight: 500;
 }
 
 .footer {
-  background-color: #3b7355;
-  color: #fff;
-  height: 30vh;
-  display: flex;
-  align-items: center;
-  text-align: center;
+    background-color: #1e6443;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 .lista-footer li {
-  color: #ffff;
-  font-weight: 700;
-  font-size: 18px;
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
+    color: #ffff;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
 }
 
 .nome-completo {
-  font-size: 36px;
-  color: #1e6443;
-  font-weight: 700;
-  /*espessura*/
-  height: 45px;
+    font-size: 36px;
+    color: #1e6443;
+    font-weight: 700;
+    /*espessura*/
+    height: 45px;
 }
 
 .texto-sobre {
-  font-size: 20px;
-  line-height: 32px;
-  /*espaçamento entre as linhas*/
+    font-size: 20px;
+    line-height: 32px;
+    /*espaçamento entre as linhas*/
 }
 
 .criador {
-  color: #1e6443;
-  height: 60px;
-  /*altura*/
+    color: #1e6443;
+    height: 60px;
+    /*altura*/
 }
 
 .link-cad {
-  color: #eaeaea;
-  background-color: #d68749;
-  border: 5px solid #d68749;
+    color: #eaeaea;
+    background-color: #d68749;
+    border: 5px solid #d68749;
 }
 
 .link-cad:hover {
-  background-color: #1e6443;
-  border: 5px solid #1e6443;
-  border-radius: 5px;
-  transition: 0.5s;
+    background-color: #1e6443;
+    border: 5px solid #1e6443;
+    border-radius: 5px;
+    transition: 0.5s;
 }
 
 .Alert {
-  width: 100px;
-  margin-bottom: 5px;
-  font-size: 22px;
-  color: red;
-  border: solid red;
-  font-weight: 700;
+    width: 100px;
+    margin-bottom: 5px;
+    font-size: 22px;
+    color: red;
+    border: solid red;
+    font-weight: 700;
+}
+
+@media screen and(max-width:768px) {
+    body {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+.email {
+    font-size: larger;
+    color: #fff;
+}
+
+.telefone {
+    font-size: larger;
+    color: #fff;
+}
+
+.site {
+    font-size: larger;
+    color: #fff;
 }

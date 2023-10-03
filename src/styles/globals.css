@@ -1,25 +1,28 @@
-.body {
-  background-image: url("https://www.uniceplac.edu.br/app/uploads/2021/06/gHL5G4ZToBmXUsTodFDTYNhXpHbzlwgDIZwAVwcC-1024x1024.png");
-  width: 100%;
-  /*definindo a fonte de todo o nosso body*/
-  font-family: "Roboto", sans-serif;
-  margin: 0;
-  justify-content: space-around;
+/*primeiras propriedades:*/
+* {
   /*define a área de margem nos quatro lador do elemento*/
   margin: 0;
   /*distância entre o conteúdo de um elemento e suas bordas*/
   padding: 0;
   /*para configurar uma ou mais das propriedades de contorno*/
   outline: 0;
-
-
 }
 
-.turminha {
-  margin-top: 10px;
+body {
+  /*definindo a fonte de todo o nosso body*/
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  justify-content: space-around;
   width: 100%;
-  border: 5px solid #d68749;
+}
 
+
+
+.turminha {
+  margin: 20px 60px;
+  margin-top: 10%;
+  width: 80%;
+  border: 5px solid #d68749;
 }
 
 .turminha:hover {
@@ -28,18 +31,9 @@
   transition: 1s;
 }
 
-.logo {
-  background-image: url("../.././public/logo.png");
-  display: flex;
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  top: 5px;
-  left: 50px;
-}
 
 
-.li {
+li {
   /*retirando as bolinhas das nossas listas*/
   list-style: none;
 }
@@ -49,7 +43,7 @@
   display: flex;
   position: fixed;
   /*deixa o nosso header fixo*/
-  width: 1000px;
+  width: 100%;
   /*largura*/
   padding: 8px;
   /*espaçamento dos 4 lados*/
@@ -57,9 +51,8 @@
   /*espaçamento inferior*/
   padding-top: 32px;
   /*espaçamento superior*/
-  height: 100%px;
-  background-color: #3b7355;
-
+  height: 5px;
+  background-color: #1e6443;
 }
 
 .header-menu nav {
@@ -111,8 +104,6 @@ centro do browser. O container é invisível.*/
 }
 
 .subcontainer-principal {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -145,7 +136,7 @@ centro do browser. O container é invisível.*/
 
 .lista-local {
   font-size: 18px;
-  color: white;
+  color: #2f80ed;
 }
 
 .lista-descricao {
@@ -180,8 +171,7 @@ centro do browser. O container é invisível.*/
 }
 
 .footer {
-  background-color: #3b7355;
-  color: #fff;
+  background-color: #1e6443;
   height: 30vh;
   display: flex;
   align-items: center;
@@ -237,4 +227,26 @@ centro do browser. O container é invisível.*/
   color: red;
   border: solid red;
   font-weight: 700;
+}
+
+@media screen and(max-width:768px) {
+  body {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.email {
+  font-size: larger;
+  color: #fff;
+}
+
+.telefone {
+  font-size: larger;
+  color: #fff;
+}
+
+.site {
+  font-size: larger;
+  color: #fff;
 }
