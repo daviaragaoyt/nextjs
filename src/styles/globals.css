@@ -8,6 +8,11 @@
   outline: 0;
 }
 
+.br {
+  color: #1e6443;
+  background-color: #1e6443;
+}
+
 body {
   /*definindo a fonte de todo o nosso body*/
   font-family: 'Roboto', sans-serif;
@@ -15,8 +20,6 @@ body {
   justify-content: space-around;
   width: 100%;
 }
-
-
 
 .turminha {
   margin: 20px 60px;
@@ -30,8 +33,6 @@ body {
   border-radius: 25px;
   transition: 1s;
 }
-
-
 
 li {
   /*retirando as bolinhas das nossas listas*/
@@ -114,6 +115,15 @@ centro do browser. O container é invisível.*/
 .topico-principal {
   font-size: 36px;
   color: #1e6443;
+}
+
+.logo {
+  display: flex;
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  top: 5px;
+  left: 50px;
 }
 
 .lista-item {

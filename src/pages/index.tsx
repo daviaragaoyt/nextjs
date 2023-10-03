@@ -3,6 +3,7 @@ import { NextPage } from 'next'
 import Image from 'next/image'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import logo from '../../public/logo.png'
 import pessoas from '../../public/pessoas.png'
 
 const Home: NextPage = () => {
@@ -10,7 +11,7 @@ const Home: NextPage = () => {
 
    return (
       <Box className='body'>
-            <Navbar />
+            <Navbar/>
             <section className="principal">
                <article className="subcontainer-principal">
                   <div className='imagem'>

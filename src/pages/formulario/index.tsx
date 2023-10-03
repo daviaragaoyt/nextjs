@@ -5,7 +5,7 @@ import { criarFormulario } from '../../api'
 import { Box } from '@chakra-ui/react'
 import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
-import Image from 'next/image'
+import Image from '../../../public/logo.png'
 
 const Formulario: NextPage = () => {
    const [nome, setNome] = useState('')
@@ -18,10 +18,11 @@ const Formulario: NextPage = () => {
    const [racaGato, setRacaGato] = useState('0')
 
    return (
-      
-      <Box className={styles.container2}>
-          <Navbar />
-        <form
+      <Box className={styles.body}>
+         <Navbar></Navbar>
+         <br/>
+         <div className={styles.container2}>
+         <form
             className={styles.main}
             onSubmit={async (e) => {
                e.preventDefault()
@@ -183,7 +184,8 @@ const Formulario: NextPage = () => {
                </button>
             </div>
          </form>
-         <Footer/>
+         </div>
+         <Footer />
       </Box>
    )
 }
