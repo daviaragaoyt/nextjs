@@ -9,6 +9,7 @@
 }
 
 body {
+  background-color: #eaeaea;
   /*definindo a fonte de todo o nosso body*/
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -16,17 +17,18 @@ body {
   width: 100%;
 }
 
-.turminha {
-  margin: 20px 60px;
-  margin-top: 10%;
-  width: 80%;
-  border: 5px solid #d68749;
+
+.header-menu .logo3 {
+  left: 10px;
 }
 
-.turminha:hover {
-  border: 5px solid #1e6443;
-  border-radius: 25px;
-  transition: 1s;
+.logo3 {
+  display: flex;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  top: 5px;
+  left: 100px;
 }
 
 li {
@@ -48,7 +50,14 @@ li {
   padding-top: 32px;
   /*espaçamento superior*/
   height: 5px;
-  background-color: #1e6443;
+  background-color: #3b7355;
+}
+
+.header-menu:hover {
+  transition: 1s;
+  box-shadow: 0 0 15px #b4d2c2;
+  text-shadow: 0 0 15px #b4d2c2;
+  border: 1px solid #b4d2c2;
 }
 
 .header-menu nav {
@@ -56,6 +65,7 @@ li {
   display: flex;
   justify-content: flex-end;
   width: 100%;
+  height: 20px;
 }
 
 .lista-menu {
@@ -66,6 +76,8 @@ li {
   align-items: center;
   padding-right: 50px;
 }
+
+
 
 /*pegando os itens com tag a de dentro da nossa lista*/
 .lista-menu li>a {
@@ -109,19 +121,11 @@ centro do browser. O container é invisível.*/
 
 .topico-principal {
   font-size: 36px;
-  color: #1e6443;
-}
-
-.logo {
-  display: flex;
-  position: fixed;
-  width: 55px;
-  height: 55px;
-  top: 5px;
-  left: 50px;
+  color: black;
 }
 
 .lista-item {
+  background-color: #eaeaea;
   padding: 32px;
   /*espaçamento dos 4 lados*/
 }
@@ -135,13 +139,8 @@ centro do browser. O container é invisível.*/
   margin-bottom: 5px;
   /*espaçamento entre os itens da nossa lista*/
   font-size: 22px;
-  color: #661e4b;
+  color: black;
   font-weight: 700;
-}
-
-.lista-local {
-  font-size: 18px;
-  color: #2f80ed;
 }
 
 .lista-descricao {
@@ -149,20 +148,35 @@ centro do browser. O container é invisível.*/
   margin-top: 5px;
   line-height: 20px;
   /*espaçamento entre as linhas*/
-  color: #828282;
+  color: black;
   font-weight: 300;
 }
 
-.wrapper-portfolio {
+.wrapper-portfolio1 {
+  /*como se fosse o pacote do nosso portfolio*/
+  background-color: #eaeaea;
+  display: flex;
+  text-align: center;
+}
+
+.wrapper-portfolio2 {
   /*como se fosse o pacote do nosso portfolio*/
   background-color: #eaeaea;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.container article-list {
+  background-color: #eaeaea;
 }
 
 .article-lista {
   display: flex;
-
+  background-color: #eaeaea;
   margin-left: 0px;
   margin-top: 100px;
   margin-bottom: 100px;
@@ -175,26 +189,15 @@ centro do browser. O container é invisível.*/
   font-weight: 500;
 }
 
-.footer {
-  background-color: #1e6443;
-  height: 30vh;
-  display: flex;
-  align-items: center;
-  text-align: center;
+.br {
+  background-color: #eaeaea;
 }
 
-.lista-footer li {
-  color: #ffff;
-  font-weight: 700;
-  font-size: 18px;
-  margin-bottom: 16px;
-  display: flex;
-  align-items: center;
-}
+
 
 .nome-completo {
   font-size: 36px;
-  color: #1e6443;
+  color: black;
   font-weight: 700;
   /*espessura*/
   height: 45px;
@@ -203,6 +206,7 @@ centro do browser. O container é invisível.*/
 .texto-sobre {
   font-size: 20px;
   line-height: 32px;
+  color: black;
   /*espaçamento entre as linhas*/
 }
 
@@ -213,14 +217,14 @@ centro do browser. O container é invisível.*/
 }
 
 .link-cad {
-  color: #eaeaea;
+  color: #fff;
   background-color: #d68749;
   border: 5px solid #d68749;
 }
 
 .link-cad:hover {
-  background-color: #1e6443;
-  border: 5px solid #1e6443;
+  background-color: #3b7355;
+  border: 5px solid #3b7355;
   border-radius: 5px;
   transition: 0.5s;
 }
@@ -229,9 +233,44 @@ centro do browser. O container é invisível.*/
   width: 100px;
   margin-bottom: 5px;
   font-size: 22px;
-  color: red;
+  color: black;
   border: solid red;
   font-weight: 700;
+}
+
+.Alert:hover {
+  transition: 1s;
+  box-shadow: 0 0 15px red;
+  text-shadow: 0 0 15px red;
+}
+
+.footer {
+  background-color: #3b7355;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.footer:hover .lista-footer li {
+  color: #ffff;
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.email {
+  color: #fff;
+}
+
+.number {
+  color: #fff;
+}
+
+.site {
+  color: #fff;
 }
 
 @media screen and(max-width:768px) {
@@ -239,19 +278,4 @@ centro do browser. O container é invisível.*/
     width: 100%;
     flex-direction: column;
   }
-}
-
-.email {
-  font-size: larger;
-  color: #fff;
-}
-
-.telefone {
-  font-size: larger;
-  color: #fff;
-}
-
-.site {
-  font-size: larger;
-  color: #fff;
 }

@@ -3,9 +3,9 @@ const Footer =()=>{
         <footer className="footer">
         <div className="container">
             <ul id="contato">
-                <li className="menu li"><a href="secretaria.academica@uniceplac.edu.br" className="email">Email</a></li>
-                <li className="menu li"><a href="tel:613035900" className="telefone">(61) 3035-1806</a></li>
-                <li className="menu li"><a href="https://www.uniceplac.edu.br" className="site">Site Oficial</a></li>
+                <li className="email"><a href="secretaria.academica@uniceplac.edu.br" className="email">secretaria.academica@uniceplac.edu.br</a></li>
+                <li className="number"><a href="tel:613035900" className="telefone">(61) 3035-1806</a></li>
+                <li className="site"><a href="https://www.uniceplac.edu.br" className="site">https://www.uniceplac.edu.br</a></li>
             </ul>
         </div>
     </footer>
