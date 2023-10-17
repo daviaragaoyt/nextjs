@@ -3,8 +3,8 @@ import { NextPage } from 'next'
 import Image from 'next/image'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import logo from "../../public/Horizontal-Colorida.png"
-import pessoas from '../../public/pessoas.png'
+import logo from '../../public/Horizontal-Colorida.png'
+
 
 const Home: NextPage = () => {
    const urlDestino = 'https://nextjs-ebon-delta-53.vercel.app/formulario'
@@ -14,51 +14,47 @@ const Home: NextPage = () => {
          <Navbar />
          <section className="principal">
             <article className="subcontainer-principal">
-            <Image src={logo} className='logo2' alt="logo2"></Image>
+               <Image src={logo} className="logo2" alt="logo2"></Image>
                <div>
                   <h1 className="nome-completo">
                      Clinica Veterinaria UNICEPLAC
                   </h1>
-                  <br/>
-                  <br/>
-                  <br/>
+                  <br />
+                  <br />
+                  <br />
                </div>
                <br />
                <div className="texto-sobre">
                   Olá Seja Bem vindo ao site de cadastros para cirurgias no
                   Hospital Veterinario da Uniceplac
                </div>
-               <br />
-               <h1 className="lista-descricao">
-                  No RV&Pets, estamos dedicados a promover a saúde e o bem-estar
-                  de seus companheiros peludos, emplumados ou escamados. Somos
-                  apaixonados pela medicina veterinária e estamos aqui para
-                  fornecer informações valiosas, recursos confiáveis e
-                  orientações especializadas para garantir que seus animais de
-                  estimação desfrutem de vidas longas e saudáveis.
-                  <br /> Além de ser uma valiosa fonte de informações sobre
-                  saúde animal, o RV&Pets também oferece recursos para facilitar
-                  o agendamento de consultas veterinárias para seus animais de
-                  estimação.
-                  <br /> Entendemos a importância de cuidar da saúde de seus
-                  companheiros peludos de forma eficaz e conveniente, e é por
-                  isso que disponibilizamos ferramentas que tornam o processo de
-                  agendamento de consultas simples e acessível.
-               </h1>
-               </article>
+               
+            </article>
          </section>
 
-      <section className='wrapper-portfolio1'>
-                <article id="Horarios" className="container article-lista">
-               <h1 className='lista-descricao'><strong>Aqui está nosso horario de atendimento por ordem de chegada:</strong>
-                  <h3><strong>Segunda a sexta:</strong></h3>
-               <ul>
-               <li><strong>Das 08:00 as 11:00</strong></li>
-               <li><strong>E das 14:00 as 21:00</strong></li>
-               </ul>
-               </h1>
-          </article>
-          </section>
+         <section className="wrapper-portfolio1">
+            <article id="Horarios" className="container article-lista">
+               <div className="horarios">
+                  <h1 className="lista-descricao">
+                     <strong>
+                        Aqui está nosso horario de atendimento por ordem de
+                        chegada (no caso por ordem de cadastro dos formularios):
+                     </strong>
+                     <h3>
+                        <strong>Segunda a sexta:</strong>
+                     </h3>
+                     <ul>
+                        <li>
+                           <strong>Das 08:00 as 11:00</strong>
+                        </li>
+                        <li>
+                           <strong>E das 14:00 as 21:00</strong>
+                        </li>
+                     </ul>
+                  </h1>
+               </div>
+            </article>
+         </section>
 
          <section className="wrapper-portfolio2">
             <article id="informacao" className="container article-list">
@@ -77,6 +73,10 @@ const Home: NextPage = () => {
                            alunos de medicina veterinária da Uniceplac.
                            <br />
                            <br />
+                           Caso você e seu pet sejam escolidos, entraremos em
+                           contato apenas 3 vezes, por meio do seu numero.
+                           <br />
+                           <br />
                            <h1 className="Alert">Atenção:</h1>
                            <h1 className="lista-descricao">
                               <br />
@@ -90,14 +90,14 @@ const Home: NextPage = () => {
                            <br />
                            <br />
                            <ul>
-                              <li>1.Informações do Proprietário:</li>
+                              <li><strong>1.Informações do Proprietário:</strong></li>
                               <li>Nome completo do tutor;</li>
                               <li>Numero de telefone/celular;</li>
                               <li>E-mail </li>
                            </ul>
                            <br />
                            <ul>
-                              <li>2.Informações do Paciente:</li>
+                              <li><strong>2.Informações do Paciente:</strong></li>
                               <li>Nome do animal de estimação;</li>
                               <li>Espécie(apenas cão ou gato) e</li>
                               <li>Raça;</li>

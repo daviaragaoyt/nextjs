@@ -26,6 +26,7 @@ const Formulario: NextPage = () => {
             className={styles.main}
             onSubmit={async (e) => {
                e.preventDefault()
+               console.log("Formulario Enviado");
                criarFormulario(
                   nome,
                   sobrenome,
@@ -179,7 +180,7 @@ const Formulario: NextPage = () => {
                   </>
                )}
 
-               <button type="submit" className={styles.button}>
+               <button type="submit" className={styles.button} >
                   <strong>SALVAR</strong>
                </button>
             </div>

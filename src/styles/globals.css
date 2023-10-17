@@ -152,6 +152,10 @@ centro do browser. O container é invisível.*/
   font-weight: 300;
 }
 
+.horarios {
+  border: 2px solid black;
+}
+
 .wrapper-portfolio1 {
   /*como se fosse o pacote do nosso portfolio*/
   background-color: #eaeaea;
