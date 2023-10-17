@@ -57,6 +57,7 @@ const Formulario: NextPage = () => {
                <input
                   type="text"
                   name="nome"
+                  placeholder="Nome:"
                   className={styles.input}
                   onChange={(evento) => setNome(evento.target.value)}
                />
@@ -67,6 +68,7 @@ const Formulario: NextPage = () => {
                <input
                   type="text"
                   name="sobrenome"
+                  placeholder="Sobrenome:"
                   className={styles.input}
                   onChange={(evento) => setSobrenome(evento.target.value)}
                />
@@ -76,16 +78,18 @@ const Formulario: NextPage = () => {
                </label>
                <input
                   type="email"
+                  placeholder="Email:"
                   className={styles.input}
                   onChange={(evento) => setEmail(evento.target.value)}
                />
 
                <label htmlFor="telefone">
-                  <strong className={styles.strong}>Numero:</strong>
+                  <strong className={styles.strong}>Telefone:</strong>
                </label>
                <input
                   type="number"
                   name="telefone"
+                  placeholder="Telefone:"
                   className={styles.input}
                   onChange={(evento) => setTelefone(evento.target.value)}
                />
@@ -102,6 +106,7 @@ const Formulario: NextPage = () => {
                <input
                   type="text"
                   name="nomePet"
+                  placeholder="Nome do pet:"
                   className={styles.input}
                   onChange={(evento) => setNomePet(evento.target.value)}
                />
