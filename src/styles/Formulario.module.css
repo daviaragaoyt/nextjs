@@ -4,7 +4,7 @@
   margin: 0;
   justify-content: space-around;
   width: 100%;
-  background-color: #1e6443;
+  background-color: #3b7355;
 }
 
 
@@ -23,7 +23,7 @@
   margin-right: auto;
   margin-left: auto;
   max-width: 100%;
-  background-color: #1e6443;
+  background-color: #3b7355;
   height: 100%;
   width: 100%;
   background-size: cover;
@@ -69,7 +69,7 @@
   border-radius: 5px;
   margin: 10px 20px;
   border: transparent;
-  background: #e67e22;
+  background: #b4d2c2;
 }
 
 .input:hover {
@@ -87,7 +87,7 @@
   border-radius: 5px;
   margin: 10px 20px;
   border: transparent;
-  background: #e67e22;
+  background: #b4d2c2;
 }
 
 .select:hover {
@@ -111,7 +111,7 @@
   border-radius: 5px;
   margin: 10px 20px;
   border: transparent;
-  background: #e67e22;
+  background: #b4d2c2;
 }
 
 .button:hover {
@@ -133,7 +133,7 @@
 
 /*Footer*/
 .footer {
-  background-color: #1e6443;
+  background-color: #3b7355;
   height: 30vh;
   display: flex;
   align-items: center;
