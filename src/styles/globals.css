@@ -6,6 +6,7 @@
   padding: 0;
   /*para configurar uma ou mais das propriedades de contorno*/
   outline: 0;
+
 }
 
 body {
@@ -53,12 +54,6 @@ li {
   background-color: #3b7355;
 }
 
-.header-menu:hover {
-  transition: 1s;
-  box-shadow: 0 0 15px #b4d2c2;
-  text-shadow: 0 0 15px #b4d2c2;
-  border: 1px solid #b4d2c2;
-}
 
 .header-menu nav {
   /*elemento no html que aponta*/
@@ -88,9 +83,13 @@ li {
 }
 
 .principal {
-  height: 100vh;
+  justify-content: center;
+  padding: 10px;
+  align-items: center;
+  height: 50vh;
   display: flex;
   background-color: #eaeaea;
+  width: 100%;
 }
 
 /*o container é um componente do Bootstrap que garante que o seu layout vai ficar alinhado corretamente na página.
@@ -117,6 +116,7 @@ centro do browser. O container é invisível.*/
   justify-content: center;
   align-items: center;
   text-align: center;
+  width: 100%;
 }
 
 .topico-principal {
@@ -148,12 +148,13 @@ centro do browser. O container é invisível.*/
   margin-top: 5px;
   line-height: 20px;
   /*espaçamento entre as linhas*/
+  font-size: larger;
   color: black;
   font-weight: 300;
 }
 
 .horarios {
-  border: 2px solid black;
+  border: 2px solid #3b7355;
 }
 
 .wrapper-portfolio1 {
@@ -279,7 +280,7 @@ centro do browser. O container é invisível.*/
 
 @media screen and(max-width:768px) {
   body {
-    width: 100%;
+    width: 70%;
     flex-direction: column;
   }
 }

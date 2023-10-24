@@ -10,7 +10,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       orderBy: { criadoEm: "desc" },
     });
     res.json(formularios);
-  } else if (req.method === "POST") { 
+  } else if (req.method === "POST") {
     console.log("GALINHAAAAA");
     // create formulario
     const nome = JSON.parse(req.body).nome;
@@ -43,3 +43,4 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     res.json({ status: "ok" });
   }
 };
+
