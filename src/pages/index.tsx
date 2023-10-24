@@ -31,7 +31,7 @@ const Home: NextPage = () => {
                   <h1 className="lista-descricao">
                      <strong>
                         Aqui está nosso horario de atendimento por ordem de
-                        chegada (no caso por ordem de cadastro dos formularios):
+                        chegada<br/> (no caso por ordem de cadastro dos formularios):
                      </strong>
                      <h3>
                         <strong>Segunda a sexta:</strong>
