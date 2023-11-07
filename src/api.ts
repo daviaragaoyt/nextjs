@@ -59,17 +59,17 @@ export const criarFormulario = async (
   raca: string) => {
   mutate(
     formularioPath,
-    // formularios => [
-    {
-      nome: nome,
-      sobrenome: sobrenome,
-      email: email,
-      telefone: telefone,
-      nomePet: nomePet,
-      especie: especie,
-      raca: raca
-    }
-    // , ...formularios]
+    formularios => [
+      {
+        nome: nome,
+        sobrenome: sobrenome,
+        email: email,
+        telefone: telefone,
+        nomePet: nomePet,
+        especie: especie,
+        raca: raca
+      }
+      , ...formularios]
     , false,
   );
   await fetch(formularioPath, {
