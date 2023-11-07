@@ -8,43 +8,43 @@ const usuarioPath = "/api/usuarios";
 const formularioPath = "/api/formularios";
 
 //Usuario
-export const useUsuarios = () => useSWR<Usuario[]>(usuarioPath, fetcher);
+// export const useUsuarios = () => useSWR<Usuario[]>(usuarioPath, fetcher);
 
-export const criarUsuario = async (nome: string, senha: string) => {
-  mutate(
-    usuarioPath,
-    usuarios => [{ nome: nome, senha: senha }, ...usuarios],
-    false,
-  );
-  await fetch(usuarioPath, {
-    method: "POST",
-    body: JSON.stringify({ nome, senha }),
-  });
+// export const criarUsuario = async (nome: string, senha: string) => {
+//   mutate(
+//     usuarioPath,
+//     usuarios => [{ nome: nome, senha: senha }, ...usuarios],
+//     false,
+//   );
+//   await fetch(usuarioPath, {
+//     method: "POST",
+//     body: JSON.stringify({ nome, senha }),
+//   });
 
-  mutate(usuarioPath);
-};
+//   mutate(usuarioPath);
+// };
 
-export const toggleUsuario = async (usuario: Usuario) => {
-  mutate(
-    usuarioPath,
-    usuarios =>
-      usuarios.map(u =>
-        u.id === usuario.id ? { ...usuario, senha: '0000' } : u,
-      ),
-    false,
-  );
-  await fetch(`${usuarioPath}?usuarioId=${usuario.id}`, {
-    method: "PUT",
-    body: JSON.stringify({}),
-  });
-  mutate(usuarioPath);
-};
+// export const toggleUsuario = async (usuario: Usuario) => {
+//   mutate(
+//     usuarioPath,
+//     usuarios =>
+//       usuarios.map(u =>
+//         u.id === usuario.id ? { ...usuario, senha: '0000' } : u,
+//       ),
+//     false,
+//   );
+//   await fetch(`${usuarioPath}?usuarioId=${usuario.id}`, {
+//     method: "PUT",
+//     body: JSON.stringify({}),
+//   });
+//   mutate(usuarioPath);
+// };
 
-export const deleteUsuario = async (id: string) => {
-  mutate(usuarioPath, usuarios => usuarios.filter(u => u.id !== id), false);
-  await fetch(`${usuarioPath}?usuarioId=${id}`, { method: "DELETE" });
-  mutate(usuarioPath);
-};
+// export const deleteUsuario = async (id: string) => {
+//   mutate(usuarioPath, usuarios => usuarios.filter(u => u.id !== id), false);
+//   await fetch(`${usuarioPath}?usuarioId=${id}`, { method: "DELETE" });
+//   mutate(usuarioPath);
+// };
 
 //Formulario
 export const useFormularios = () => useSWR<Formulario[]>(formularioPath, fetcher);
