@@ -221,19 +221,6 @@ centro do browser. O container é invisível.*/
   /*altura*/
 }
 
-.link-cad {
-  color: #fff;
-  background-color: #d68749;
-  border: 5px solid #d68749;
-}
-
-.link-cad:hover {
-  background-color: #3b7355;
-  border: 5px solid #3b7355;
-  border-radius: 5px;
-  transition: 0.5s;
-}
-
 .Alert {
   width: 100px;
   margin-bottom: 5px;

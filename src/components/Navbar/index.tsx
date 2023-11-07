@@ -1,14 +1,14 @@
-import Image from "next/image";
-import logo from '../../../public/logo3.png';
-import { Box } from "@chakra-ui/react";
+import Image from 'next/image'
+import logo from '../../../public/logo3.png'
+import { Box } from '@chakra-ui/react'
 
 const Navbar = () => {
-
-    return (
-    <Box className="header-menu">
-        <nav>
-            <Image src={logo} className="logo3" alt="logo3" width={100}/>
+   return (
+      <Box className="header-menu">
+         <nav>
+            <Image src={logo} className="logo3" alt="logo3" width={100} />
             <ul className="lista-menu">
+<<<<<<< HEAD
                         <li>
                             <a href="..#horarios">Horarios</a>
                         </li>
@@ -22,6 +22,18 @@ const Navbar = () => {
         </nav>
     </Box>
     )
+=======
+               <li>
+                  <a href="#Horarios">Horarios</a>
+               </li>
+               <li>
+                  <a href="#contato">Contato</a>
+               </li>
+            </ul>
+         </nav>
+      </Box>
+   )
+>>>>>>> 32e786eb29a4dd0033a51a1558b9c6774df7defe
 }
 
-export default Navbar;
+export default Navbar

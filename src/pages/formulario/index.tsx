@@ -20,7 +20,6 @@ const Formulario: NextPage = () => {
    return (
       <Box className={styles.body}>
          <Navbar></Navbar>
-         <br />
          <div className={styles.container2}>
             <form
                className={styles.main}
@@ -204,7 +203,6 @@ const Formulario: NextPage = () => {
             </form>
          </div>
          <Footer />
-
       </Box>
    )
 }
