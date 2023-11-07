@@ -6,7 +6,7 @@ import Navbar from '../components/Navbar'
 import logo from '../../public/Horizontal-Colorida.png'
 
 const Home: NextPage = () => {
-   const urlDestino = 'https://nextjs-ebon-delta-53.vercel.app/formulario'
+   const urlDestino = './formulario'
 
    return (
       <Box className="body">
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
                   Hospital Veterinario da Uniceplac
                </div>
                <br />
-               <div className="horarios">
+               <div id="#horarios" className="horarios">
                   <h1 className="lista-descricao">
                      <strong>
                         Aqui está nosso horario de atendimento por ordem de

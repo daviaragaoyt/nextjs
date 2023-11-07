@@ -1,13 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { PrismaClient } from "@prisma/client";
 
+
 const prisma = new PrismaClient();
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "GET") {
     // get all formularios
-    const formularios = await prisma.formulario.findMany({
-      orderBy: { criadoEm: "desc" },
+    const formularios = prisma.formulario.findMany({
+      orderBy: { id: "desc" },
     });
     res.json(formularios);
   } else if (req.method === "POST") {

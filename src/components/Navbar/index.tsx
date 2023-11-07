@@ -10,7 +10,7 @@ const Navbar = () => {
             <Image src={logo} className="logo3" alt="logo3" width={100}/>
             <ul className="lista-menu">
                         <li>
-                            <a href="#Horarios">Horarios</a>
+                            <a href="..#horarios">Horarios</a>
                         </li>
                     <li>
                         <a href="..#Informações">Avisos</a>

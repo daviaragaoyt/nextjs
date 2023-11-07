@@ -13,12 +13,12 @@ import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
 
 const Listagem = () => {
-   const { data: formularios, error } = useFormularios()
+   const { data: formulario, error } = useFormularios()
 
    if (error != null) return <div>Erro ao carregar Formularios</div>
-   if (formularios == null) return <div>Carregando...</div>
+   if (formulario == null) return <div>Carregando...</div>
 
-   if (formularios.length === 0) {
+   if (formulario.length === 0) {
       return <div>Tente adicionar um formulário</div>
    }
 
@@ -38,7 +38,7 @@ const Listagem = () => {
                   </Tr>
                </Thead>
                <Tbody>
-                  {formularios.map((item, index) => (
+                  {formulario.map((item, index) => (
                      <Tr key={index}>
                         <Td>
                            {item.nome} {item.sobrenome}
