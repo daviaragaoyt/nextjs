@@ -2,7 +2,7 @@ export interface Usuario {
   id: string;
   nome: string;
   senha: string;
-  criadoEm: string;
+  criadoEm: Date;
 }
 
 export interface Formulario {
@@ -14,6 +14,6 @@ export interface Formulario {
   nomePet: string;
   especie: string;
   raca: string;
-  criadoEm: string;
-  Genero:string;
+  criadoEm: Date;
+  // Genero:string;
 }

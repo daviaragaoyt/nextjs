@@ -7,12 +7,11 @@ const prisma = new PrismaClient();
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "GET") {
     // get all formularios
-    const formularios = await prisma.formulario.findMany({
-      orderBy: { id: "desc" },
-    });
+    const formularios = await prisma.formulario.findMany();
+    console.log("GALINHAAAAA do get: ", res.json(formularios))
     res.json(formularios);
   } else if (req.method === "POST") {
-    console.log("GALINHAAAAA");
+    console.log("GALINHAAAAA do post");
     // create formulario
     const nome = JSON.parse(req.body).nome;
     const sobrenome = JSON.parse(req.body).sobrenome;
