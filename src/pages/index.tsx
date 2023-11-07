@@ -91,7 +91,7 @@ const Home: NextPage = () => {
                         target="_blank"
                         rel="noopener noreferrer"
                      >
-                        <button>Fazer Cadastro</button>
+                        <button className="button">Fazer Cadastro</button>
                      </a>
                   </ul>
                </div>

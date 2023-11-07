@@ -7,7 +7,7 @@ const prisma = new PrismaClient();
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "GET") {
     // get all formularios
-    const formularios = prisma.formulario.findMany({
+    const formularios = await prisma.formulario.findMany({
       orderBy: { id: "desc" },
     });
     res.json(formularios);

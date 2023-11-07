@@ -21,6 +21,7 @@ body {
 
 .header-menu .logo3 {
   left: 10px;
+  position: relative;
 }
 
 .logo3 {
@@ -40,7 +41,7 @@ li {
 .header-menu {
   /*torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens*/
   display: flex;
-  position: fixed;
+  position: relative;
   /*deixa o nosso header fixo*/
   width: 100%;
   /*largura*/
@@ -270,4 +271,26 @@ centro do browser. O container é invisível.*/
     width: 70%;
     flex-direction: column;
   }
+}
+
+.button {
+  margin-left: 20px;
+  color: #888;
+  width: 150px;
+  height: 30px;
+  border-radius: 5px;
+  margin: 10px 20px;
+  border: 1px solid #888;
+  color: #333;
+  background: #b4d2c2;
+}
+
+.button:hover {
+  border-radius: 20px;
+  box-shadow: 0 0 15px transparent;
+  text-shadow: 0 0 15px transparent;
+  transition: 0.7s;
+  cursor: pointer;
+  color: black;
+  background-color: #d68749;
 }

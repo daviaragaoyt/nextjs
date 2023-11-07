@@ -8,32 +8,14 @@ const Navbar = () => {
          <nav>
             <Image src={logo} className="logo3" alt="logo3" width={100} />
             <ul className="lista-menu">
-<<<<<<< HEAD
-                        <li>
-                            <a href="..#horarios">Horarios</a>
-                        </li>
-                    <li>
-                        <a href="..#Informações">Avisos</a>
-                    </li>
-                    <li>
-                        <a href="#contato">Contato</a>
-                    </li>
-                </ul>
-        </nav>
-    </Box>
-    )
-=======
                <li>
                   <a href="#Horarios">Horarios</a>
                </li>
-               <li>
-                  <a href="#contato">Contato</a>
-               </li>
+              
             </ul>
          </nav>
       </Box>
    )
->>>>>>> 32e786eb29a4dd0033a51a1558b9c6774df7defe
 }
 
 export default Navbar
