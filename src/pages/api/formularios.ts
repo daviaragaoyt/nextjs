@@ -8,7 +8,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === "GET") {
     // get all formularios
     const formularios = await prisma.formulario.findMany({
-      orderBy: { criadoEm: "desc" },
+
     });
     console.log("GALINHAAAAA do get: ", res.json(formularios))
     res.json(formularios);
@@ -45,4 +45,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     res.json({ status: "ok" });
   }
 };
+
 

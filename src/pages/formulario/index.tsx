@@ -8,7 +8,6 @@ import Navbar from '../../components/Navbar'
 import Image from 'next/image'
 import logo from '../../../public/logo3.png'
 
-
 const Formulario: NextPage = () => {
    const [nome, setNome] = useState('')
    const [sobrenome, setSobrenome] = useState('')
@@ -20,20 +19,25 @@ const Formulario: NextPage = () => {
    const [racaGato, setRacaGato] = useState('0')
 
    return (
-         <Box className={styles.body}>
-           <div className={styles.header}>
+      <Box className={styles.body}>
+         <div className={styles.header}>
             <nav className={styles.nav}>
-            <Image src={logo} className={styles.logo3} alt="logo3" width={100} />
-            <ul className={styles.listamenu}>
-               <li className={styles.li}>
-                  <a className={styles.a} href="../#horarios">Horarios</a>
-               </li>
-              
-            </ul>
+               <Image
+                  src={logo}
+                  className={styles.logo3}
+                  alt="logo3"
+                  width={100}
+               />
+               <ul className={styles.listamenu}>
+                  <li className={styles.li}>
+                     <a className={styles.a} href="../#horarios">
+                        Horarios
+                     </a>
+                  </li>
+               </ul>
             </nav>
-           </div>
+         </div>
          <div className={styles.container2}>
-            
             <form
                className={styles.main}
                onSubmit={async (e) => {
@@ -216,8 +220,7 @@ const Formulario: NextPage = () => {
             </form>
          </div>
          <Footer />
-       
-         </Box>
+      </Box>
    )
 }
 

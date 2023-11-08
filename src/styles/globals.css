@@ -287,22 +287,19 @@ centro do browser. O container é invisível.*/
 }
 
 .button {
-  margin-left: 20px;
-  color: #888;
   width: 150px;
-  height: 30px;
+  height: 35px;
   border-radius: 5px;
-  margin: 10px 20px;
-  border: 1px solid #888;
-  color: #333;
+  border: 1px solid black;
+  color: black;
   background: #b4d2c2;
 }
 
 .button:hover {
-  border-radius: 20px;
+  border-radius: 25px;
   box-shadow: 0 0 15px transparent;
   text-shadow: 0 0 15px transparent;
-  transition: 0.7s;
+  transition: 1s;
   cursor: pointer;
   color: black;
   background-color: #d68749;
