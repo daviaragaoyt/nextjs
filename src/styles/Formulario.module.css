@@ -7,26 +7,84 @@
   background-color: #3b7355;
 }
 
+.header .logo3 {
+  left: -35%;
+  position: relative;
+  padding: 0px;
 
+}
 
-.logo {
+.logo3 {
   display: flex;
-  position: fixed;
-  width: 55px;
-  height: 55px;
+  position: relative;
+  width: 60px;
+  height: 60px;
   top: 5px;
-  left: 50px;
+
+}
+
+
+.li {
+  /*retirando as bolinhas das nossas listas*/
+  list-style: none;
+}
+
+.header {
+  /*torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens*/
+  display: flex;
+  position: relative;
+  /*deixa o nosso header fixo*/
+  width: 100%;
+  height: 0px;
+  background-color: #3b7355;
+
+}
+
+.header .nav {
+  /*elemento no html que aponta*/
+  display: flex;
+  padding: 0px;
+  justify-content: flex-end;
+  position: relative;
+  width: 100%;
+}
+
+
+.header .nav {
+  /*elemento no html que aponta*/
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 70px;
+}
+
+.listamenu {
+  display: flex;
+  justify-content: space-evenly;
+  /*espaçamento entre eles seja igual*/
+  width: 50%;
+  align-items: center;
+  padding: 0;
+}
+
+
+
+/*pegando os itens com tag a de dentro da nossa lista*/
+.listamenu li>a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: inherit;
+  padding: 0;
 }
 
 .container2 {
   margin-top: 70px;
-  margin-right: auto;
-  margin-left: auto;
+
   max-width: 100%;
   background-color: #fff;
   height: 100%;
   width: 100%;
-  background-size: cover;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,15 +182,11 @@
   background-color: #d68749;
 }
 
-@media screen and(max-width: 768px) {
-  .body {
-    width: 100%;
-    flex-direction: column;
-  }
-}
+
 
 /*Footer*/
 .footer {
+  width: 100%;
   background-color: #3b7355;
   height: 10vh;
   display: flex;
@@ -149,7 +203,9 @@
   align-items: center;
 }
 
-.footer {
-  width: 100%;
-  border: 10px solid black;
+@media screen and(max-width: 768px) {
+  .body {
+    width: 100%;
+    flex-direction: column;
+  }
 }

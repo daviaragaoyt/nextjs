@@ -6,7 +6,6 @@
   padding: 0;
   /*para configurar uma ou mais das propriedades de contorno*/
   outline: 0;
-
 }
 
 body {
@@ -20,8 +19,10 @@ body {
 
 
 .header-menu .logo3 {
-  left: 10px;
-  position: relative;
+  left: 100px;
+  position: fixed;
+  padding: 0px;
+
 }
 
 .logo3 {
@@ -30,8 +31,9 @@ body {
   width: 60px;
   height: 60px;
   top: 5px;
-  left: 100px;
+  left: 50px;
 }
+
 
 li {
   /*retirando as bolinhas das nossas listas*/
@@ -41,11 +43,11 @@ li {
 .header-menu {
   /*torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens*/
   display: flex;
-  position: relative;
+  position: fixed;
   /*deixa o nosso header fixo*/
   width: 100%;
   /*largura*/
-  padding: 8px;
+  padding: 0px;
   /*espaçamento dos 4 lados*/
   padding-bottom: 32px;
   /*espaçamento inferior*/
@@ -53,12 +55,23 @@ li {
   /*espaçamento superior*/
   height: 5px;
   background-color: #3b7355;
+
+}
+
+.header-menu nav {
+  /*elemento no html que aponta*/
+  display: flex;
+  padding: 0px;
+  justify-content: flex-end;
+  position: relative;
+  width: 100%;
 }
 
 
 .header-menu nav {
   /*elemento no html que aponta*/
   display: flex;
+
   justify-content: flex-end;
   width: 100%;
   height: 20px;
