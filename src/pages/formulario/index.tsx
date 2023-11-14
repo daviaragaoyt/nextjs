@@ -2,7 +2,7 @@ import { NextPage } from 'next'
 import styles from '../../styles/Formulario.module.css'
 import { useState } from 'react'
 import { criarFormulario } from '../../api'
-import { Box } from '@chakra-ui/react'
+import { Box, Radio } from '@chakra-ui/react'
 import Footer from '../../components/Footer'
 import Navbar from '../../components/Navbar'
 import Image from 'next/image'
@@ -14,6 +14,7 @@ const Formulario: NextPage = () => {
    const [email, setEmail] = useState('')
    const [telefone, setTelefone] = useState('')
    const [nomePet, setNomePet] = useState('')
+   const [sexoPet, setSexoPet] = useState('0')
    const [especie, setEspecie] = useState('0')
    const [racaCachorro, setRacaCachorro] = useState('0')
    const [racaGato, setRacaGato] = useState('0')
@@ -49,6 +50,7 @@ const Formulario: NextPage = () => {
                      email,
                      telefone,
                      nomePet,
+                     sexoPet,
                      especie,
                      racaCachorro
                   )
@@ -119,6 +121,7 @@ const Formulario: NextPage = () => {
                   <label htmlFor="nomePet">
                      <strong className={styles.strong}>Nome do pet:</strong>
                   </label>
+
                   <input
                      type="text"
                      name="nomePet"
@@ -126,7 +129,33 @@ const Formulario: NextPage = () => {
                      className={styles.input}
                      onChange={(evento) => setNomePet(evento.target.value)}
                   />
+                  <br />
+                  <br />
+                  <label className={styles.sexPet} htmlFor="sexoPet">
+                     <br />
+                     <strong className={styles.strong}>Sexo do animal:</strong>
 
+                     <input
+                        className={styles.sexoPet}
+                        value="macho"
+                        type="radio"
+                        name="sexoPet"
+                        id="sexoPet"
+                     />
+                     <strong>Macho</strong>
+                        
+                     
+                     <input
+                        className={styles.sexoPet}
+                        value="femea   "
+                        type="radio"
+                        name="sexoPet"
+                        id="sexoPet"
+                     />
+                     <strong>Femêa</strong>
+                  </label>
+
+                  <br />
                   <label htmlFor="selectAnimal">
                      <strong className={styles.strong}>
                         Escolha um animal:

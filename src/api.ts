@@ -55,6 +55,7 @@ export const criarFormulario = async (
   email: string,
   telefone: string,
   nomePet: string,
+  sexoPet: string,
   especie: string,
   raca: string,
 ) => {
@@ -66,6 +67,7 @@ export const criarFormulario = async (
       email: email,
       telefone: telefone,
       nomePet: nomePet,
+      sexoPet: sexoPet,
       especie: especie,
       raca: raca,
     }, ...formularios],
@@ -79,6 +81,7 @@ export const criarFormulario = async (
       email,
       telefone,
       nomePet,
+      sexoPet,
       especie,
       raca,
     }),

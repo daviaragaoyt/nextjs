@@ -21,6 +21,7 @@ model Formulario {
   email     String
   telefone  String
   nomePet   String
+  sexoPet   String
   especie   String
   raca      String
   criadoEm  DateTime @default(now())

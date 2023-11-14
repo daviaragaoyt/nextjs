@@ -138,6 +138,22 @@
   background-color: #b4d2c2;
 }
 
+.sexPet {
+
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sexoPet {
+
+  width: 40px;
+  height: 30px;
+  background: #fff;
+}
+
 .select {
   width: 90%;
   height: 60px;

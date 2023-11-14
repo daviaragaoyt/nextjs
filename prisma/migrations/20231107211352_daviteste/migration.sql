@@ -25,6 +25,7 @@ CREATE TABLE "Formulario" (
     "email" TEXT NOT NULL,
     "telefone" TEXT NOT NULL,
     "nomePet" TEXT NOT NULL,
+    "sexoPet" TEXT NOT NULL,
     "especie" TEXT NOT NULL,
     "raca" TEXT NOT NULL,
     "criadoEm" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
